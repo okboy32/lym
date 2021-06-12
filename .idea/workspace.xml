@@ -6,6 +6,7 @@
       <change afterPath="$PROJECT_DIR$/cookies.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/fhxz" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/fhxz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,14 +19,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fhxz.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="354" column="22" selection-start-line="354" selection-start-column="22" selection-end-line="354" selection-end-column="22" />
+            <state relative-caret-position="158">
+              <caret line="332" column="48" lean-forward="true" selection-start-line="332" selection-start-column="48" selection-end-line="332" selection-end-column="48" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -72,10 +82,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>frame_list</find>
+      <find>gfunc_getGfuncInfo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -83,6 +94,7 @@
         <option value="$PROJECT_DIR$/cookies.py" />
         <option value="$PROJECT_DIR$/fhxz" />
         <option value="$PROJECT_DIR$/fhxz.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -169,12 +181,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1623435877533</updated>
-      <workItem from="1623435878794" duration="10645000" />
+      <workItem from="1623435878794" duration="10807000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10645000" />
+    <option name="totallyTimeSpent" value="10807000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="204" y="23" width="1920" height="1110" extended-state="0" />
@@ -187,11 +199,11 @@
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32907662" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32907662" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2475442" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2475442" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3074656" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -234,11 +246,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fhxz.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="354" column="22" selection-start-line="354" selection-start-column="22" selection-end-line="354" selection-end-column="22" />
+        <state relative-caret-position="158">
+          <caret line="332" column="48" lean-forward="true" selection-start-line="332" selection-start-column="48" selection-end-line="332" selection-end-column="48" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
         </state>
       </provider>
     </entry>
