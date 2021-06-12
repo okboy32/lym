@@ -5,6 +5,7 @@ import time
 
 import requests
 from cookies import save_cookies as sc, get_cookies as gc
+from notify import send_dd
 
 
 class Fhxz:
@@ -22,6 +23,8 @@ class Fhxz:
         cookies = self.get_cookies().get('token')
         Fhxz.token = cookies if cookies else self.token
         self.frame_list = []
+        self.user_info = {}
+        self.have_tixian = False
 
         self.get_token()
 
@@ -134,6 +137,10 @@ class Fhxz:
             if item['type'] == 'farmland_getFarmlandList':
                 frame_list = item['data']['farmlandList']
                 self.frame_list = frame_list
+
+            if item['type'] == 'user_getUserInfo':
+                user_info = item['data']['userInfo']
+                self.user_info = user_info
         # print('enter_game: ', data)
 
     def gcfun(self):
@@ -292,11 +299,11 @@ class Fhxz:
         data = response.json()
         for item in data:
             if item['type'] == 'market_getItemList':
-                data = data['data']
+                data = item['data']
                 for market_item in data['marketItemList']:
-                    item_id = item['itemDefId']
-                    title = item['title']
-                    amount = item['cashAmount']
+                    item_id = market_item['itemDefId']
+                    title = market_item['title']
+                    amount = market_item['cashAmount']
                     if market_item['progress'] >= market_item['targetNumber']:
                         print(f'{item_id} {title} 可提现{amount}元')
                         if amount < 1:
@@ -317,14 +324,23 @@ class Fhxz:
         data = response.json()
         for item in data:
             if item['type'] == 'market_exchange':
-                data = data['data']['marketItem']
+                data = item['data']['marketItem']
                 status = data['stateCode']
                 amount = data['cashAmount']
                 no_audit = data['noAudit']
-                print(f'{amount} 提现成功 status: {status} {"无需审核" if no_audit else "待审核"}')
+                notify_str = f'{amount}元提现成功 status: {status} {"无需审核" if no_audit else "待审核"}'
+                send_dd("富豪小镇", 1, self.user_info["nickname"], notify_str)
+                self.have_tixian = True
+                self.gcfun()
+                self.check_market()
+            elif item['type'] == 'system_error':
+                message = item['data']['message']
+                notify_str = f'提现失败 {message}'
+                send_dd("富豪小镇", 1, self.user_info["nickname"], notify_str)
+                self.have_tixian = True
 
-        self.gcfun()
-        self.check_market()
+
+
 
     def handle_frame(self):
         # troubleStateCode 1 需维修
@@ -343,6 +359,8 @@ class Fhxz:
         self.handle_frame()
         self.get_frame_list()
         self.handle_frame()
+        if not self.have_tixian:
+            self.check_market()
 
 
 if __name__ == '__main__':
