@@ -1,0 +1,30 @@
+#### user enter game
+curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: application/octet-stream' -H 'x-unity-version: 2019.2.9f1' -H 'user-agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'accept-language: zh-cn' --data-binary '[{"type":"user_enterGame","data":{}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1623437268_78703e162c3517dfb92f4d11740599a8&msgtype=user_enterGame'
+
+#### gfunc_getGfuncInfo
+curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: application/octet-stream' -H 'x-unity-version: 2019.2.9f1' -H 'user-agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'accept-language: zh-cn' --data-binary '[{"type":"gfunc_getGfuncInfo","data":{}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1623437268_78703e162c3517dfb92f4d11740599a8&msgtype=gfunc_getGfuncInfo'
+
+#### pet_getPetHouse
+curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: application/octet-stream' -H 'x-unity-version: 2019.2.9f1' -H 'user-agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'accept-language: zh-cn' --data-binary '[{"type":"pet_getPetHouse","data":{}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1623437268_78703e162c3517dfb92f4d11740599a8&msgtype=pet_getPetHouse'
+
+
+### invitation
+curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: application/octet-stream' -H 'x-unity-version: 2019.2.9f1' -H 'user-agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'accept-language: zh-cn' --data-binary '[{"type":"invitation_getInvitationBag","data":{}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1623437268_78703e162c3517dfb92f4d11740599a8&msgtype=invitation_getInvitationBag'
+
+
+### daily
+curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: application/octet-stream' -H 'x-unity-version: 2019.2.9f1' -H 'user-agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'accept-language: zh-cn' --data-binary '[{"type":"dailyQuest_getQuestList","data":{"questType":1}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1623437268_78703e162c3517dfb92f4d11740599a8&msgtype=dailyQuest_getQuestList'
+
+
+### user ads info
+curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: application/octet-stream' -H 'x-unity-version: 2019.2.9f1' -H 'user-agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'accept-language: zh-cn' --data-binary '[{"type":"userAdsInfo_getAdsInfo","data":{}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1623437268_78703e162c3517dfb92f4d11740599a8&msgtype=userAdsInfo_getAdsInfo'
+
+
+### getGpvGameOptions
+curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: application/octet-stream' -H 'x-unity-version: 2019.2.9f1' -H 'user-agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'accept-language: zh-cn' --data-binary '[{"type":"system_getGpvGameOptions","data":{"gameId":"sunnytown-cn","runtimePlatform":"ios","versionName":"1.0.9"}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1623437268_78703e162c3517dfb92f4d11740599a8&msgtype=system_getGpvGameOptions'
+
+### check heartbeat
+curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: application/octet-stream' -H 'x-unity-version: 2019.2.9f1' -H 'user-agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'accept-language: zh-cn' --data-binary '[{"type":"stealingVege_checkHeartBeat","data":{}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1623437268_78703e162c3517dfb92f4d11740599a8&msgtype=stealingVege_checkHeartBeat'
+
+### system_keep_alive
+curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: application/octet-stream' -H 'x-unity-version: 2019.2.9f1' -H 'user-agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'accept-language: zh-cn' --data-binary '[{"type":"system_keep_alive","data":{"clientTimeMillis":"1623437458018","pingTimeMillis":"100"}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1623437268_78703e162c3517dfb92f4d11740599a8&msgtype=system_keep_alive'
