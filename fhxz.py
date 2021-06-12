@@ -369,6 +369,11 @@ if __name__ == '__main__':
         fhxz = Fhxz()
         fhxz.run()
 
+        del fhxz
+
+        if datetime.datetime.now().hour >= 22:
+            break
+
         random_sleep = random.randint(120, 1500)
         print(f'等待{random_sleep}秒')
         time.sleep(random_sleep)
