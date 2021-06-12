@@ -5,7 +5,7 @@ import time
 
 import requests
 from cookies import save_cookies as sc, get_cookies as gc
-from notify import send_dd
+from lym_notify import send_dd
 
 
 class Fhxz:
