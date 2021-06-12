@@ -339,9 +339,6 @@ class Fhxz:
                 send_dd("富豪小镇", 1, self.user_info["nickname"], notify_str)
                 self.have_tixian = True
 
-
-
-
     def handle_frame(self):
         # troubleStateCode 1 需维修
         for item in self.frame_list:
@@ -364,7 +361,8 @@ class Fhxz:
 
 
 if __name__ == '__main__':
-    for i in range(30):
+    times = random.randint(16, 33)
+    for i in range(times):
         start_time = time.time()
         fhxz = Fhxz()
         fhxz.run()

@@ -23,5 +23,7 @@ def send_dd(title, index, nickname, text):
     sign = urllib.parse.quote_plus(base64.b64encode(hmac_code))
     res = requests.post(
         f'https://oapi.dingtalk.com/robot/send?access_token={DD_TOKEN}&timestamp={timestamp}&sign={sign}',
-        headers={'Content-Type': 'application/json'}, json={"text": text, "msgtype": "text"})
+        headers={'Content-Type': 'application/json'}, json={"text": {
+            "content": text
+        }, "msgtype": "text"})
     print(res.text)
