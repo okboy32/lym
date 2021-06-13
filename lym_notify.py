@@ -21,9 +21,10 @@ def send_dd(title, index, nickname, text):
     string_to_sign_enc = string_to_sign.encode('utf-8')
     hmac_code = hmac.new(secret_enc, string_to_sign_enc, digestmod=hashlib.sha256).digest()
     sign = urllib.parse.quote_plus(base64.b64encode(hmac_code))
-    res = requests.post(
-        f'https://oapi.dingtalk.com/robot/send?access_token={DD_TOKEN}&timestamp={timestamp}&sign={sign}',
-        headers={'Content-Type': 'application/json'}, json={"text": {
-            "content": text
-        }, "msgtype": "text"})
-    print(res.text)
+    # res = requests.post(
+    #     f'https://oapi.dingtalk.com/robot/send?access_token={DD_TOKEN}&timestamp={timestamp}&sign={sign}',
+    #     headers={'Content-Type': 'application/json'}, json={"text": {
+    #         "content": text
+    #     }, "msgtype": "text"})
+    print('发送通知\t' + text)
+    # print(res.text)

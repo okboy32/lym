@@ -12,7 +12,7 @@ curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: applic
 curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: application/octet-stream' -H 'x-unity-version: 2019.2.9f1' -H 'user-agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'accept-language: zh-cn' --data-binary '[{"type":"invitation_getInvitationBag","data":{}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1623437268_78703e162c3517dfb92f4d11740599a8&msgtype=invitation_getInvitationBag'
 
 
-### daily
+### daily 日常任务 statusCode2 完成
 curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: application/octet-stream' -H 'x-unity-version: 2019.2.9f1' -H 'user-agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'accept-language: zh-cn' --data-binary '[{"type":"dailyQuest_getQuestList","data":{"questType":1}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1623437268_78703e162c3517dfb92f4d11740599a8&msgtype=dailyQuest_getQuestList'
 
 
@@ -28,3 +28,16 @@ curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: applic
 
 ### system_keep_alive
 curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: application/octet-stream' -H 'x-unity-version: 2019.2.9f1' -H 'user-agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'accept-language: zh-cn' --data-binary '[{"type":"system_keep_alive","data":{"clientTimeMillis":"1623437458018","pingTimeMillis":"100"}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1623437268_78703e162c3517dfb92f4d11740599a8&msgtype=system_keep_alive'
+
+#### 全体加速
+curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: application/octet-stream' -H 'x-unity-version: 2019.2.9f1' -H 'user-agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'accept-language: zh-cn' --data-binary '[{"type":"farmland_speedUpAll","data":{"farmlandDefId":0}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1623548958_f0a7dc6e9cf246f1b7355f64fa8de633&msgtype=farmland_speedUpAll'
+
+### 领取日常奖励
+curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: application/octet-stream' -H 'x-unity-version: 2019.2.9f1' -H 'user-agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'accept-language: zh-cn' --data-binary '[{"type":"dailyQuest_receiveReward","data":{"questDefId":1001,"questType":1}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1623548958_f0a7dc6e9cf246f1b7355f64fa8de633&msgtype=dailyQuest_receiveReward'
+
+### 获取抽奖详情 剩余次数 data['lotteryInfo']['remainingTimes']
+curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: application/octet-stream' -H 'x-unity-version: 2019.2.9f1' -H 'user-agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'accept-language: zh-cn' --data-binary '[{"type":"lottery_getLotteryInfo","data":{}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1623548958_f0a7dc6e9cf246f1b7355f64fa8de633&msgtype=lottery_getLotteryInfo'
+
+
+### 抽奖
+curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: application/octet-stream' -H 'x-unity-version: 2019.2.9f1' -H 'user-agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'accept-language: zh-cn' --data-binary '[{"type":"lottery_draw","data":{"priceType":3001}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1623548958_f0a7dc6e9cf246f1b7355f64fa8de633&msgtype=lottery_draw'
