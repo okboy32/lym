@@ -26,7 +26,7 @@ class Fhxz:
         cookies = self.get_cookies().get('token')
         Fhxz.token = cookies if cookies else self.token
         self.frame_list = []
-        self.lottery_times = 0
+        self.lottery_times = 10
         self.daily_tasks = []
         self.user_info = {}
         self.have_tixian_times = 2
@@ -538,8 +538,9 @@ class Fhxz:
 
     def step3(self):
         # todo 抽奖
-        self.get_lottery_info()
-        self.lottery()
+        if self.lottery_times:
+            self.get_lottery_info()
+            self.lottery()
 
     def run(self):
         self.step2()
@@ -552,6 +553,7 @@ if __name__ == '__main__':
     fhxz = Fhxz()
 
     while fhxz.success_time <= target_times or fhxz.speed_times > 0:
+        print(f'当前账号{fhxz.user_info.get("nickname")},执行第{fhxz.speed_times + 1}次', flush=True)
         try:
             fhxz.init()
             fhxz.run()
@@ -565,5 +567,7 @@ if __name__ == '__main__':
             break
 
         random_sleep = random.randint(120, 1500)
-        print(f'等待{random_sleep}秒', flush=True)
+        print(f'休息{random_sleep}秒', flush=True)
         time.sleep(random_sleep)
+
+    print('任务结束', flush=True)
