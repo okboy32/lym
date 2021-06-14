@@ -533,7 +533,7 @@ class Fhxz:
         self.get_frame_list()
         self.handle_frame()
         self.random_wait(1, 10)
-        if not self.have_tixian_times:
+        if self.have_tixian_times:
             self.check_market()
 
     def step3(self):
@@ -565,5 +565,5 @@ if __name__ == '__main__':
             break
 
         random_sleep = random.randint(120, 1500)
-        print(f'等待{random_sleep}秒')
+        print(f'等待{random_sleep}秒', flush=True)
         time.sleep(random_sleep)
