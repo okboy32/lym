@@ -29,7 +29,7 @@ class Fhxz:
         self.lottery_times = 0
         self.daily_tasks = []
         self.user_info = {}
-        self.have_tixian = False
+        self.have_tixian_times = 2
         self.t = None
         self.t2 = None
         self.t3 = None
@@ -84,6 +84,9 @@ class Fhxz:
         r = random.randint(a, b)
         time.sleep(r)
         return r
+
+    def look_adv(self, t=50):
+        self.random_wait(t-10, t+10)
 
     def get_cookies(self):
         return gc(self.index, '富豪小镇')
@@ -282,7 +285,7 @@ class Fhxz:
         rate = random.randint(1, 100)
         if rate > 80:
             print(f'开始修理地块{frame_id}', flush=True)
-            self.random_wait(30, 50)
+            self.look_adv(50)
 
             params = (
                 ('accessToken', self.token),
@@ -379,7 +382,7 @@ class Fhxz:
                             self.tixian(item_id)
 
     def tixian(self, item_id):
-        if self.have_tixian:
+        if not self.have_tixian_times:
             print('今日已提现过', flush=True)
             return
         self.random_wait(1, 3)
@@ -402,14 +405,14 @@ class Fhxz:
                 no_audit = data['noAudit']
                 notify_str = f'{amount}元提现成功 status: {status} {"无需审核" if no_audit else "待审核"}'
                 send_dd("富豪小镇", 1, self.user_info["nickname"], notify_str)
-                self.have_tixian = True
+                self.have_tixian_times = self.have_tixian_times - 1 if self.have_tixian_times > 0 else 0
                 self.gcfun()
                 self.check_market(sendonly=True)
             elif item['type'] == 'system_error':
                 message = item['data']['message']
                 notify_str = f'提现失败 {message}'
                 send_dd("富豪小镇", 1, self.user_info["nickname"], notify_str)
-                self.have_tixian = True
+                self.have_tixian_times = 0
 
     def handle_frame(self):
         # troubleStateCode 1 需维修
@@ -446,6 +449,7 @@ class Fhxz:
         if self.speed_times <= 0:
             print('今日加速次数已用完', flush=True)
             return
+        self.look_adv()
         params = (
             ('accessToken', self.token),
             ('msgtype', 'farmland_speedUpAll'),
@@ -488,7 +492,7 @@ class Fhxz:
         times = random.randint(1, try_times_max)
         for _ in range(times):
             print("开始抽奖一次", flush=True)
-            self.random_wait(35, 50)
+            self.look_adv()
             params = (
                 ('accessToken', self.token),
                 ('msgtype', 'lottery_draw'),
@@ -521,7 +525,7 @@ class Fhxz:
         self.get_frame_list()
         self.handle_frame()
         self.random_wait(1, 10)
-        if not self.have_tixian:
+        if self.have_tixian_times:
             self.check_market()
         self.speed_up_all()
         self.handle_frame()
@@ -529,7 +533,7 @@ class Fhxz:
         self.get_frame_list()
         self.handle_frame()
         self.random_wait(1, 10)
-        if not self.have_tixian:
+        if not self.have_tixian_times:
             self.check_market()
 
     def step3(self):
