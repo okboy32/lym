@@ -553,9 +553,9 @@ if __name__ == '__main__':
     fhxz = Fhxz()
 
     while fhxz.success_time <= target_times or fhxz.speed_times > 0:
-        print(f'当前账号{fhxz.user_info.get("nickname")},执行第{fhxz.speed_times + 1}次', flush=True)
         try:
             fhxz.init()
+            print(f'当前账号{fhxz.user_info.get("nickname")},执行第{fhxz.success_time + 1}次', flush=True)
             fhxz.run()
             fhxz.success_time += 1
         except ProxyError as e:
