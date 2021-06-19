@@ -40,6 +40,7 @@ class Fhxz:
         self.lottery_reword_map = {}
         self.success_time = 0
         self._exit = False
+        self._finish = False
 
     def request(self, method="get", **kw):
         try:
@@ -128,28 +129,28 @@ class Fhxz:
         self.save_cookies({'token': token})
 
     def sub_thread(self):
-        while True:
+        while not self._finish:
             if not self._exit:
                 self.gpv()
                 time.sleep(60)
 
     def sub_thread2(self):
         time.sleep(30)
-        while True:
+        while not self._finish:
             if not self._exit:
                 self.heartbeat()
                 time.sleep(60)
 
     def sub_thread3(self):
         time.sleep(30)
-        while True:
+        while not self._finish:
             if not self._exit:
                 self.keep_alive()
                 time.sleep(60)
 
     def sub_thread4(self):
         time.sleep(30)
-        while True:
+        while not self._finish:
             if not self._exit:
                 self.user_ads_info()
                 time.sleep(300)
@@ -681,7 +682,7 @@ if __name__ == '__main__':
 
         fhxz.exit()
 
-        if not (8 <= datetime.datetime.now().hour <= 22):
+        if not (8 <= datetime.datetime.now().hour < 22):
             break
 
         random_sleep = random.randint(120, 1500)
@@ -689,3 +690,4 @@ if __name__ == '__main__':
         time.sleep(random_sleep)
 
     print('任务结束', flush=True)
+    fhxz._finish = True
