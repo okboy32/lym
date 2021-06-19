@@ -472,7 +472,12 @@ class Fhxz:
             print(f"全体加速剩余次数：{self.speed_times}", flush=True)
         else:
             system_error = self.get_data(response, 'system_error')
-            print(f'看广告太频繁{system_error["data"]["message"]}')
+            if system_error["data"]["message"] == '今日次数已用完':
+                print(f'{system_error["data"]["message"]}')
+                self.speed_times = 0
+            else:
+                print(f'看广告太频繁{system_error["data"]["message"]}')
+
 
     def get_lottery_info(self):
 
@@ -577,10 +582,10 @@ class Fhxz:
 
                 response = requests.post('https://sunnytown.hyskgame.com/api/messages', headers=self.headers, params=params,
                                          data=data)
-
-            data = self.get_data(response, 'stealingVege_attackTarget')
-            print(f'偷取{data["data"]["attackTarget"]["nickname"]}一次',
-                  flush=True)
+                raw = response.json()
+                data = self.get_data(response, 'stealingVege_attackTarget')
+                print(f'偷取{data["data"]["attackTarget"]["nickname"]}一次',
+                      flush=True)
 
     def pet_house(self):
         print(f'检查守护', end=':')
