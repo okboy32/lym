@@ -41,3 +41,144 @@ curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: applic
 
 ### 抽奖
 curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: application/octet-stream' -H 'x-unity-version: 2019.2.9f1' -H 'user-agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'accept-language: zh-cn' --data-binary '[{"type":"lottery_draw","data":{"priceType":3001}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1623548958_f0a7dc6e9cf246f1b7355f64fa8de633&msgtype=lottery_draw'
+
+
+#### 打卡进度
+curl -H 'Host: sunnytown.hyskgame.com' -H 'Content-Type: application/octet-stream' -H 'User-Agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'Accept: */*' -H 'Accept-Language: zh-cn' -H 'X-Unity-Version: 2019.2.9f1' --data-binary '[{"type":"farmCheckIn_getCheckInInfo","data":{}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1623815216_04ae74d3b8b72a265fd6b61f5f179165&msgtype=farmCheckIn_getCheckInInfo'
+[{
+	"type": "farmCheckIn_getCheckInInfo",
+	"data": {
+		"checkInInfo": {
+			"id": 675047,
+			"userId": 1040314,
+			"stateCode": 2,
+			"dayNumber": 5,
+			"progress": 15,
+			"lastResetTime": "2021-06-16 08:40:13",
+			"lastCompletedTime": "2021-06-16 11:47:01",
+			"failureStateCode": 0,
+			"failureTimes": 0,
+			"entriesText": "[{\"id\":\"1\",\"stateCode\":2,\"dayNumber\":\"5\",\"displayCashAmount\":0.66,\"noAudit\":1,\"exchangeRequireText\":null},{\"id\":\"2\",\"stateCode\":1,\"dayNumber\":\"15\",\"displayCashAmount\":8.8,\"noAudit\":0,\"exchangeRequireText\":null},{\"id\":\"3\",\"stateCode\":1,\"dayNumber\":\"30\",\"displayCashAmount\":36,\"noAudit\":0,\"exchangeRequireText\":null},{\"id\":\"4\",\"stateCode\":1,\"dayNumber\":\"60\",\"displayCashAmount\":88,\"noAudit\":0,\"exchangeRequireText\":null},{\"id\":\"5\",\"stateCode\":1,\"dayNumber\":\"90\",\"displayCashAmount\":100,\"noAudit\":0,\"exchangeRequireText\":null},{\"id\":\"6\",\"stateCode\":1,\"dayNumber\":\"180\",\"displayCashAmount\":300,\"noAudit\":0,\"exchangeRequireText\":null}]",
+			"maxDayNumber": 5,
+			"totalProgress": 15,
+			"entries": [{
+				"id": "1",
+				"stateCode": 2,
+				"dayNumber": "5",
+				"displayCashAmount": 0.66,
+				"noAudit": 1,
+				"exchangeRequireText": null
+			}, {
+				"id": "2",
+				"stateCode": 1,
+				"dayNumber": "15",
+				"displayCashAmount": 8.8,
+				"noAudit": 0,
+				"exchangeRequireText": null
+			}, {
+				"id": "3",
+				"stateCode": 1,
+				"dayNumber": "30",
+				"displayCashAmount": 36,
+				"noAudit": 0,
+				"exchangeRequireText": null
+			}, {
+				"id": "4",
+				"stateCode": 1,
+				"dayNumber": "60",
+				"displayCashAmount": 88,
+				"noAudit": 0,
+				"exchangeRequireText": null
+			}, {
+				"id": "5",
+				"stateCode": 1,
+				"dayNumber": "90",
+				"displayCashAmount": 100,
+				"noAudit": 0,
+				"exchangeRequireText": null
+			}, {
+				"id": "6",
+				"stateCode": 1,
+				"dayNumber": "180",
+				"displayCashAmount": 300,
+				"noAudit": 0,
+				"exchangeRequireText": null
+			}]
+		}
+	}
+}]
+
+
+#### 打卡提现
+curl -H 'Host: sunnytown.hyskgame.com' -H 'Content-Type: application/octet-stream' -H 'User-Agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'Accept: */*' -H 'Accept-Language: zh-cn' -H 'X-Unity-Version: 2019.2.9f1' --data-binary '[{"type":"farmCheckIn_receiveReward","data":{"dayNumber":5}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1623815216_04ae74d3b8b72a265fd6b61f5f179165&msgtype=farmCheckIn_receiveReward'
+
+[{
+	"type": "farmCheckIn_receiveReward",
+	"data": {
+		"checkInInfo": {
+			"id": 675047,
+			"userId": 1040314,
+			"stateCode": 2,
+			"dayNumber": 5,
+			"progress": 15,
+			"lastResetTime": "2021-06-16 08:40:13",
+			"lastCompletedTime": "2021-06-16 11:47:01",
+			"failureStateCode": 0,
+			"failureTimes": 0,
+			"entriesText": "[{\"id\":\"1\",\"stateCode\":3,\"dayNumber\":\"5\",\"displayCashAmount\":0.66,\"noAudit\":1,\"exchangeRequireText\":null},{\"id\":\"2\",\"stateCode\":1,\"dayNumber\":\"15\",\"displayCashAmount\":8.8,\"noAudit\":0,\"exchangeRequireText\":null},{\"id\":\"3\",\"stateCode\":1,\"dayNumber\":\"30\",\"displayCashAmount\":36,\"noAudit\":0,\"exchangeRequireText\":null},{\"id\":\"4\",\"stateCode\":1,\"dayNumber\":\"60\",\"displayCashAmount\":88,\"noAudit\":0,\"exchangeRequireText\":null},{\"id\":\"5\",\"stateCode\":1,\"dayNumber\":\"90\",\"displayCashAmount\":100,\"noAudit\":0,\"exchangeRequireText\":null},{\"id\":\"6\",\"stateCode\":1,\"dayNumber\":\"180\",\"displayCashAmount\":300,\"noAudit\":0,\"exchangeRequireText\":null}]",
+			"maxDayNumber": 5,
+			"totalProgress": 15,
+			"entries": [{
+				"id": "1",
+				"stateCode": 3,
+				"dayNumber": "5",
+				"displayCashAmount": 0.66,
+				"noAudit": 1,
+				"exchangeRequireText": null
+			}, {
+				"id": "2",
+				"stateCode": 1,
+				"dayNumber": "15",
+				"displayCashAmount": 8.8,
+				"noAudit": 0,
+				"exchangeRequireText": null
+			}, {
+				"id": "3",
+				"stateCode": 1,
+				"dayNumber": "30",
+				"displayCashAmount": 36,
+				"noAudit": 0,
+				"exchangeRequireText": null
+			}, {
+				"id": "4",
+				"stateCode": 1,
+				"dayNumber": "60",
+				"displayCashAmount": 88,
+				"noAudit": 0,
+				"exchangeRequireText": null
+			}, {
+				"id": "5",
+				"stateCode": 1,
+				"dayNumber": "90",
+				"displayCashAmount": 100,
+				"noAudit": 0,
+				"exchangeRequireText": null
+			}, {
+				"id": "6",
+				"stateCode": 1,
+				"dayNumber": "180",
+				"displayCashAmount": 300,
+				"noAudit": 0,
+				"exchangeRequireText": null
+			}]
+		},
+		"dayNumber": 5
+	}
+}]
+
+
+#### 偷取列表
+curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: application/octet-stream' -H 'x-unity-version: 2019.2.9f1' -H 'user-agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'accept-language: zh-cn' --data-binary '[{"type":"stealingVege_getStealingVege","data":{}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1624036714_a586d57befe198a7f27742da4fe9e043&msgtype=stealingVege_getStealingVege'
+
+#### 偷取
+curl -H 'Host: sunnytown.hyskgame.com' -H 'accept: */*' -H 'content-type: application/octet-stream' -H 'x-unity-version: 2019.2.9f1' -H 'user-agent: fuhaoxiaozhen/23 CFNetwork/1237 Darwin/20.4.0' -H 'accept-language: zh-cn' --data-binary '[{"type":"stealingVege_attackTarget","data":{"recordId":3}}]' --compressed 'https://sunnytown.hyskgame.com/api/messages?accessToken=1040314_1624036714_a586d57befe198a7f27742da4fe9e043&msgtype=stealingVege_attackTarget'

@@ -11,7 +11,7 @@ from lym_notify import send_dd
 
 
 class Fhxz:
-    token = '1040314_1623576622_5aa474e7081a8bc25e0e2531d88c32f5'
+    token = '1063496_1623822045_d17e4d8a5e28da540b6e76b167d09496'
     headers = {
         'Host': 'sunnytown.hyskgame.com',
         'accept': '*/*',
@@ -30,6 +30,8 @@ class Fhxz:
         self.daily_tasks = []
         self.user_info = {}
         self.have_tixian_times = 2
+        self.have_steal = False
+        self.have_check_in = False
         self.t = None
         self.t2 = None
         self.t3 = None
@@ -79,14 +81,17 @@ class Fhxz:
     def exit(self):
         self._exit = True
 
-    @staticmethod
-    def random_wait(a, b):
+    def random_wait(self, a, b):
         r = random.randint(a, b)
+        if r > 30:
+            self._exit = True
         time.sleep(r)
+        if r > 30:
+            self._exit = False
         return r
 
     def look_adv(self, t=50):
-        self.random_wait(t-10, t+10)
+        self.random_wait(t - 10, t + 10)
 
     def get_cookies(self):
         return gc(self.index, '富豪小镇')
@@ -161,7 +166,7 @@ class Fhxz:
 
         response = requests.post('https://sunnytown.hyskgame.com/api/messages', headers=self.headers, params=params,
                                  data=data)
-        print('keep_alive:', flush=True)
+        # print('keep_alive:', flush=True)
 
     def heartbeat(self):
 
@@ -174,7 +179,7 @@ class Fhxz:
 
         response = requests.post('https://sunnytown.hyskgame.com/api/messages', headers=self.headers, params=params,
                                  data=data)
-        print('heartbeat:', flush=True)
+        # print('heartbeat:', flush=True)
 
     def gpv(self):
         params = (
@@ -185,7 +190,7 @@ class Fhxz:
         data = '[{"type":"system_getGpvGameOptions","data":{"gameId":"sunnytown-cn","runtimePlatform":"ios","versionName":"1.0.9"}}]'
         response = requests.post('https://sunnytown.hyskgame.com/api/messages', headers=self.headers, params=params,
                                  data=data)
-        print('gpv:', flush=True)
+        # print('gpv:', flush=True)
 
     def enter_game(self):
 
@@ -236,19 +241,19 @@ class Fhxz:
         data = self.get_data(response)
         # print('invitation', data)
 
-    def pet_house(self):
-
-        params = (
-            ('accessToken', self.token),
-            ('msgtype', 'pet_getPetHouse'),
-        )
-
-        data = '[{"type":"pet_getPetHouse","data":{}}]'
-
-        response = requests.post('https://sunnytown.hyskgame.com/api/messages', headers=self.headers, params=params,
-                                 data=data)
-        data = self.get_data(response)
-        # print('pet_house', data)
+    # def pet_house(self):
+    #
+    #     params = (
+    #         ('accessToken', self.token),
+    #         ('msgtype', 'pet_getPetHouse'),
+    #     )
+    #
+    #     data = '[{"type":"pet_getPetHouse","data":{}}]'
+    #
+    #     response = requests.post('https://sunnytown.hyskgame.com/api/messages', headers=self.headers, params=params,
+    #                              data=data)
+    #     data = self.get_data(response)
+    #     # print('pet_house', data)
 
     def daily(self):
 
@@ -516,6 +521,105 @@ class Fhxz:
             if not in_list:
                 print(f"抽中:{reward_id} 数量:{reward_num}\t", flush=True)
 
+    def get_checkin_info(self):
+
+        params = (
+            ('accessToken', self.token),
+            ('msgtype', 'farmCheckIn_getCheckInInfo'),
+        )
+
+        data = '[{"type":"farmCheckIn_getCheckInInfo","data":{}}]'
+
+        response = requests.post('https://sunnytown.hyskgame.com/api/messages', headers=self.headers, params=params,
+                                 data=data)
+
+        data = self.get_data(response, 'farmCheckIn_getCheckInInfo')
+        entries = data['data']['checkInInfo']['entries']
+        day_number = data['data']['checkInInfo']['dayNumber']
+        for entry in entries:
+            cur_day_number = entry['dayNumber']
+            if entry['statusCode'] == 2:
+                if int(day_number) >= int(cur_day_number):
+                    data = '[{"type":"farmCheckIn_receiveReward","data":{"dayNumber":' + str(cur_day_number) + '}}]'
+
+                    response = requests.post('https://sunnytown.hyskgame.com/api/messages', headers=self.headers,
+                                             params=params,
+                                             data=data)
+                    data = self.get_data(response, 'farmCheckIn_getCheckInInfo')
+                    entries = data['data']['checkInInfo']['entries']
+                    for entry in entries:
+                        if entry['dayNumber'] == cur_day_number and entry['statusCode'] == 3:
+                            notify_str = f'签到{cur_day_number}天奖励{entry["displayCashAmount"]}，提现成功'
+                            print(notify_str, flush=True)
+                            send_dd("富豪小镇", 1, self.user_info["nickname"], notify_str)
+
+    def get_stealing_vege(self):
+        print('开始偷取', flush=True)
+        params = (
+            ('accessToken', self.token),
+            ('msgt ype', 'stealingVege_getStealingVege'),
+        )
+
+        data = '[{"type":"stealingVege_getStealingVege","data":{}}]'
+
+        response = requests.post('https://sunnytown.hyskgame.com/api/messages', headers=self.headers, params=params,
+                                 data=data)
+
+        data = self.get_data(response, 'stealingVege_getStealingVege')
+        for item in data['data']['stealingVege']['targetUsers']:
+            self.random_wait(1, 3)
+            params = (
+                ('accessToken', self.token),
+                ('msgtype', 'stealingVege_attackTarget'),
+            )
+            if item['state'] == 0:
+                data = '[{"type":"stealingVege_attackTarget","data":{"recordId":' + str(item['id']) + '}}]'
+
+                response = requests.post('https://sunnytown.hyskgame.com/api/messages', headers=self.headers, params=params,
+                                         data=data)
+
+            data = self.get_data(response, 'stealingVege_attackTarget')
+            print(f'偷取{data["data"]["attackTarget"]["nickname"]}一次',
+                  flush=True)
+
+    def pet_house(self):
+        print(f'检查守护', end=':')
+        self.random_wait(1, 3)
+        params = (
+            ('accessToken', self.token),
+            ('msgtype', 'pet_getPetHouse'),
+        )
+
+        data = '[{"type":"pet_getPetHouse","data":{}}]'
+
+        response = requests.post('https://sunnytown.hyskgame.com/api/messages', headers=self.headers, params=params,
+                                 data=data)
+        data = self.get_data(response)
+        data = data['petHouse']
+        end_time = datetime.datetime.strptime(data['defenseEndTime'], '%Y-%m-%d %H:%M:%S')
+        detail_day = end_time.day - datetime.datetime.now().day
+        detail_hour = end_time.hour - datetime.datetime.now().hour
+        if detail_hour + detail_day * 24 < 3:
+            if data['remainingFeedTimes'] > 0:
+                self.random_wait(30, 50)
+                params = (
+                    ('accessToken', self.token),
+                    ('msgtype', 'pet_feedPetFood'),
+                )
+
+                data = '[{"type":"pet_feedPetFood","data":{}}]'
+
+                response = requests.post('https://sunnytown.hyskgame.com/api/messages', headers=self.headers,
+                                         params=params,
+                                         data=data)
+                data = self.get_data(response)
+                data = data['petHouse']
+                print(f'守护结束时间：{data["defenseEndTime"]}', flush=True)
+            else:
+                print('次数已用完！', flush=True)
+        else:
+            print('成功！', flush=True)
+
     def step1(self):
         self.finish_daily_task()
 
@@ -546,6 +650,13 @@ class Fhxz:
         self.step2()
         self.step3()
         self.step1()
+        if not self.have_check_in and self.speed_times == 0:
+            self.get_checkin_info()
+            # self.have_tixian_times = True
+        self.pet_house()
+        if not self.have_steal:
+            self.get_stealing_vege()
+            self.have_steal = True
 
 
 if __name__ == '__main__':
@@ -560,10 +671,12 @@ if __name__ == '__main__':
             fhxz.success_time += 1
         except ProxyError as e:
             print('网络异常' + str(e), flush=True)
+        except Exception as e:
+            print('未知错误' + str(e), flush=True)
 
         fhxz.exit()
 
-        if datetime.datetime.now().hour >= 22:
+        if 8 <= datetime.datetime.now().hour >= 22:
             break
 
         random_sleep = random.randint(120, 1500)
