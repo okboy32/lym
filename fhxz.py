@@ -36,7 +36,7 @@ class Fhxz:
         self.t2 = None
         self.t3 = None
         self.t4 = None
-        self.speed_times = 15
+        self.speed_times = 0
         self.lottery_reword_map = {}
         self.success_time = 0
         self._exit = False
@@ -543,7 +543,7 @@ class Fhxz:
         day_number = data['data']['checkInInfo']['dayNumber']
         for entry in entries:
             cur_day_number = entry['dayNumber']
-            if entry['statusCode'] == 2:
+            if entry['stateCode'] == 2:
                 if int(day_number) >= int(cur_day_number):
                     data = '[{"type":"farmCheckIn_receiveReward","data":{"dayNumber":' + str(cur_day_number) + '}}]'
 
@@ -553,7 +553,7 @@ class Fhxz:
                     data = self.get_data(response, 'farmCheckIn_getCheckInInfo')
                     entries = data['data']['checkInInfo']['entries']
                     for entry in entries:
-                        if entry['dayNumber'] == cur_day_number and entry['statusCode'] == 3:
+                        if entry['dayNumber'] == cur_day_number and entry['stateCode'] == 3:
                             notify_str = f'签到{cur_day_number}天奖励{entry["displayCashAmount"]}，提现成功'
                             print(notify_str, flush=True)
                             send_dd("富豪小镇", 1, self.user_info["nickname"], notify_str)
@@ -652,9 +652,9 @@ class Fhxz:
             self.lottery()
 
     def run(self):
-        self.step2()
-        self.step3()
-        self.step1()
+        # self.step2()
+        # self.step3()
+        # self.step1()
         if not self.have_check_in and self.speed_times == 0:
             self.get_checkin_info()
             # self.have_tixian_times = True
@@ -681,7 +681,7 @@ if __name__ == '__main__':
 
         fhxz.exit()
 
-        if 8 <= datetime.datetime.now().hour >= 22:
+        if not (8 <= datetime.datetime.now().hour <= 22):
             break
 
         random_sleep = random.randint(120, 1500)
