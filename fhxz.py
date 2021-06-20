@@ -36,7 +36,7 @@ class Fhxz:
         self.t2 = None
         self.t3 = None
         self.t4 = None
-        self.speed_times = 0
+        self.speed_times = 15
         self.lottery_reword_map = {}
         self.success_time = 0
         self._exit = False
@@ -682,7 +682,7 @@ if __name__ == '__main__':
 
         fhxz.exit()
 
-        if not (8 <= datetime.datetime.now().hour < 22):
+        if not (8 <= datetime.datetime.now().hour < 25):
             break
 
         random_sleep = random.randint(120, 1500)
