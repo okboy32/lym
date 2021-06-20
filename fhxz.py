@@ -653,9 +653,9 @@ class Fhxz:
             self.lottery()
 
     def run(self):
-        # self.step2()
-        # self.step3()
-        # self.step1()
+        self.step2()
+        self.step3()
+        self.step1()
         if not self.have_check_in and self.speed_times == 0:
             self.get_checkin_info()
             # self.have_tixian_times = True

@@ -1,0 +1,118 @@
+#### app配置
+curl -H 'Host: app.hubonews.com' -H 'Cookie: gr_user_id=0ab124e7-108a-4a4e-9ce2-9a417b1bd9d3' -H 'x_client_app: com.tigerye.tigerobo' -H 'user-agent: tigerobo/2.8.7 (iPhone; iOS 14.5.1; Scale/3.00)' -H 'brand_product: Apple-iPhone11,6' -H 'x_client_version: 2.8.7' -H 'x_client_idfa: ' -H 'device_id: 160925EB-BF27-4001-855E-E4809302AD0C' -H 'x_client_channel: App Store' -H 'x_client_platform: iOS' -H 'x_client_country: CN' -H 'accept-language: zh-Hans-CN;q=1' -H 'x_client_build: 253' -H 'api_authorization: ULBoPLKVKIiEOlxZjSPz' -H 'x_client_translation_language: en' -H 'accept: */*' -H 'content-type: application/json' -H 'x_client_language: zh' --data-binary "{}" --compressed 'https://app.hubonews.com/config'
+
+#### user信息
+curl -H 'Host: app.hubonews.com' -H 'Cookie: gr_user_id=0ab124e7-108a-4a4e-9ce2-9a417b1bd9d3' -H 'x_client_app: com.tigerye.tigerobo' -H 'user-agent: tigerobo/2.8.7 (iPhone; iOS 14.5.1; Scale/3.00)' -H 'brand_product: Apple-iPhone11,6' -H 'x_client_version: 2.8.7' -H 'x_client_idfa: ' -H 'device_id: 160925EB-BF27-4001-855E-E4809302AD0C' -H 'x_client_channel: App Store' -H 'x_client_platform: iOS' -H 'x_client_country: CN' -H 'accept-language: zh-Hans-CN;q=1' -H 'x_client_build: 253' -H 'api_authorization: ULBoPLKVKIiEOlxZjSPz' -H 'x_client_translation_language: en' -H 'accept: */*' -H 'content-type: application/json' -H 'x_client_language: zh' --data-binary "" --compressed 'https://app.hubonews.com/v1/user/info'
+
+#### 文章列表
+curl -H 'Host: app.hubonews.com' -H 'Cookie: gr_user_id=0ab124e7-108a-4a4e-9ce2-9a417b1bd9d3' -H 'x_client_app: com.tigerye.tigerobo' -H 'user-agent: tigerobo/2.8.7 (iPhone; iOS 14.5.1; Scale/3.00)' -H 'brand_product: Apple-iPhone11,6' -H 'x_client_version: 2.8.7' -H 'x_client_idfa: ' -H 'device_id: 160925EB-BF27-4001-855E-E4809302AD0C' -H 'x_client_channel: App Store' -H 'x_client_platform: iOS' -H 'x_client_country: CN' -H 'accept-language: zh-Hans-CN;q=1' -H 'x_client_build: 253' -H 'api_authorization: ULBoPLKVKIiEOlxZjSPz' -H 'x_client_translation_language: en' -H 'accept: */*' -H 'content-type: application/json' -H 'x_client_language: zh' --data-binary '{"limit":20,"page":2}' --compressed 'https://app.hubonews.com/v4/articles/list'
+
+#### 文章详情
+curl -H 'Host: app.hubonews.com' -H 'Cookie: gr_user_id=0ab124e7-108a-4a4e-9ce2-9a417b1bd9d3' -H 'x_client_app: com.tigerye.tigerobo' -H 'user-agent: tigerobo/2.8.7 (iPhone; iOS 14.5.1; Scale/3.00)' -H 'brand_product: Apple-iPhone11,6' -H 'x_client_version: 2.8.7' -H 'x_client_idfa: ' -H 'device_id: 160925EB-BF27-4001-855E-E4809302AD0C' -H 'x_client_channel: App Store' -H 'x_client_platform: iOS' -H 'x_client_country: CN' -H 'accept-language: zh-Hans-CN;q=1' -H 'x_client_build: 253' -H 'api_authorization: ULBoPLKVKIiEOlxZjSPz' -H 'x_client_translation_language: en' -H 'accept: */*' -H 'content-type: application/json' -H 'x_client_language: zh' --data-binary '{"id":3477604,"batchNumber":0}' --compressed 'https://app.hubonews.com/v1/article/content'
+
+#### 文章评论列表
+curl -H 'Host: app.hubonews.com' -H 'Cookie: gr_user_id=0ab124e7-108a-4a4e-9ce2-9a417b1bd9d3' -H 'x_client_app: com.tigerye.tigerobo' -H 'user-agent: tigerobo/2.8.7 (iPhone; iOS 14.5.1; Scale/3.00)' -H 'brand_product: Apple-iPhone11,6' -H 'x_client_version: 2.8.7' -H 'x_client_idfa: ' -H 'device_id: 160925EB-BF27-4001-855E-E4809302AD0C' -H 'x_client_channel: App Store' -H 'x_client_platform: iOS' -H 'x_client_country: CN' -H 'accept-language: zh-Hans-CN;q=1' -H 'x_client_build: 253' -H 'api_authorization: ULBoPLKVKIiEOlxZjSPz' -H 'x_client_translation_language: en' -H 'accept: */*' -H 'content-type: application/json' -H 'x_client_language: zh' --data-binary '{"limit":20,"nextId":0,"commentId":0,"type":0,"articleId":3477604}' --compressed 'https://app.hubonews.com/v2/comment/getComments'
+
+#### 评论
+curl -H 'Host: app.hubonews.com' -H 'Cookie: gr_user_id=0ab124e7-108a-4a4e-9ce2-9a417b1bd9d3' -H 'x_client_app: com.tigerye.tigerobo' -H 'user-agent: tigerobo/2.8.7 (iPhone; iOS 14.5.1; Scale/3.00)' -H 'brand_product: Apple-iPhone11,6' -H 'x_client_version: 2.8.7' -H 'x_client_idfa: ' -H 'device_id: 160925EB-BF27-4001-855E-E4809302AD0C' -H 'x_client_channel: App Store' -H 'x_client_platform: iOS' -H 'x_client_country: CN' -H 'accept-language: zh-Hans-CN;q=1' -H 'x_client_build: 253' -H 'api_authorization: ULBoPLKVKIiEOlxZjSPz' -H 'x_client_translation_language: en' -H 'accept: */*' -H 'content-type: application/json' -H 'x_client_language: zh' --data-binary '{"replyCommentId":0,"content":"好","type":0,"articleId":3477604}' --compressed 'https://app.hubonews.com/v2/comment/createByArticleid'
+curl -H 'Host: app.hubonews.com' -H 'Cookie: gr_user_id=0ab124e7-108a-4a4e-9ce2-9a417b1bd9d3' -H 'x_client_app: com.tigerye.tigerobo' -H 'user-agent: tigerobo/2.8.7 (iPhone; iOS 14.5.1; Scale/3.00)' -H 'brand_product: Apple-iPhone11,6' -H 'x_client_version: 2.8.7' -H 'x_client_idfa: ' -H 'device_id: 160925EB-BF27-4001-855E-E4809302AD0C' -H 'x_client_channel: App Store' -H 'x_client_platform: iOS' -H 'x_client_country: CN' -H 'accept-language: zh-Hans-CN;q=1' -H 'x_client_build: 253' -H 'api_authorization: ULBoPLKVKIiEOlxZjSPz' -H 'x_client_translation_language: en' -H 'accept: */*' -H 'content-type: application/json' -H 'x_client_language: zh' --data-binary '{"sign":"6d6bc2f24a9c0f5f13f0345dfc6c1628","action_time":1624118824319,"business_id":"3477604","action_type":104}' --compressed 'https://app.hubonews.com/v1/activity/points/update'
+
+#### 点赞评论
+curl -H 'Host: app.hubonews.com' -H 'Cookie: gr_user_id=0ab124e7-108a-4a4e-9ce2-9a417b1bd9d3' -H 'x_client_app: com.tigerye.tigerobo' -H 'user-agent: tigerobo/2.8.7 (iPhone; iOS 14.5.1; Scale/3.00)' -H 'brand_product: Apple-iPhone11,6' -H 'x_client_version: 2.8.7' -H 'x_client_idfa: ' -H 'device_id: 160925EB-BF27-4001-855E-E4809302AD0C' -H 'x_client_channel: App Store' -H 'x_client_platform: iOS' -H 'x_client_country: CN' -H 'accept-language: zh-Hans-CN;q=1' -H 'x_client_build: 253' -H 'api_authorization: ULBoPLKVKIiEOlxZjSPz' -H 'x_client_translation_language: en' -H 'accept: */*' -H 'content-type: application/json' -H 'x_client_language: zh' --data-binary '{"commentId":1433316,"articleId":3477604,"type":0}' --compressed 'https://app.hubonews.com/v2/comment/supportByCommentid'
+
+#### 任务详情
+curl -H 'Host: app.hubonews.com' -H 'Cookie: gr_user_id=0ab124e7-108a-4a4e-9ce2-9a417b1bd9d3' -H 'x_client_app: com.tigerye.tigerobo' -H 'user-agent: tigerobo/2.8.7 (iPhone; iOS 14.5.1; Scale/3.00)' -H 'brand_product: Apple-iPhone11,6' -H 'x_client_version: 2.8.7' -H 'x_client_idfa: ' -H 'device_id: 160925EB-BF27-4001-855E-E4809302AD0C' -H 'x_client_channel: App Store' -H 'x_client_platform: iOS' -H 'x_client_country: CN' -H 'accept-language: zh-Hans-CN;q=1' -H 'x_client_build: 253' -H 'api_authorization: ULBoPLKVKIiEOlxZjSPz' -H 'x_client_translation_language: en' -H 'accept: */*' -H 'content-type: application/json' -H 'x_client_language: zh' --compressed 'https://app.hubonews.com/v2/activity/tasks'
+{
+	"code": 0,
+	"msg": "ok",
+	"data": {
+		"user_id": 10270740,
+		"avatar": "https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83ers8L0VElicdSC96iawNbBkoPQCcexP4CSfgNj3ItVuOxRuNaRvjKtwLeRGJuAg1Nlz4SDXONLdnyAg/132",
+		"point": 58,
+		"coin": 0,
+		"total_available_amount": 0.58,
+		"day_limit": 1,
+		"tasks": [{
+			"type": 1,
+			"desc": "奖励任务",
+			"list": [{
+				"type": 100,
+				"reward": 10,
+				"title": "邀请新好友",
+				"index": 1,
+				"logo": "https://oss.hubokan.com/20201123175033-invite.png",
+				"jump_url": "tigerobo://summary.translate.com/task_invite",
+				"desc": "每邀请一位新好友",
+				"action_desc": "去邀请",
+				"max_times": 1,
+				"completed_times": 0,
+				"assets_change_desc": "+100金币"
+			}]
+		}, {
+			"type": 2,
+			"desc": "签到任务",
+			"list": [{
+				"type": 127,
+				"reward": 0,
+				"title": "每日签到",
+				"index": 2,
+				"logo": "https://oss.hubokan.com/common/file/20210604153441-signin.png",
+				"jump_url": "tigerobo://summary.translate.com/task_sign_in",
+				"desc": "连续签到！每日得梅子",
+				"action_desc": "去签到",
+				"max_times": 0,
+				"completed_times": 0,
+				"assets_change_desc": ""
+			}]
+		}, {
+			"type": 3,
+			"desc": "日常任务",
+			"list": [{
+				"type": 101,
+				"reward": 1,
+				"title": "阅读文章",
+				"index": 3,
+				"logo": "https://oss.hubokan.com/20201123175102-read.png",
+				"jump_url": "tigerobo://summary.translate.com/main_tab?index=2",
+				"desc": "阅读一篇文章10秒",
+				"action_desc": "去阅读",
+				"max_times": 5,
+				"completed_times": 1,
+				"assets_change_desc": "+1梅子"
+			}, {
+				"type": 116,
+				"reward": 1,
+				"title": "关注媒体源",
+				"index": 4,
+				"logo": "https://oss.hubokan.com/20210421110101-follow_sites.png",
+				"jump_url": "tigerobo://summary.translate.com/media_all",
+				"desc": "关注1个媒体源获1梅子",
+				"action_desc": "去关注",
+				"max_times": 10,
+				"completed_times": 10,
+				"assets_change_desc": "+1梅子"
+			}, {
+				"type": 117,
+				"reward": 50,
+				"title": "评论大神",
+				"index": 5,
+				"logo": "https://oss.hubokan.com/20210421110014-gold_comment.png",
+				"jump_url": "tigerobo://summary.translate.com/main_tab?index=0",
+				"desc": "发表当天评论被赞10次获50梅子",
+				"action_desc": "去写啦",
+				"max_times": 5,
+				"completed_times": 0,
+				"assets_change_desc": "+50梅子"
+			}]
+		}],
+		"cash_ratio_toast": "当前100梅子/金币可兑换1元人民币"
+	},
+	"seq_id": "8fdd6498-4754-4618-9bf9-37619c696a21"
+}
+
+### 签到信息
+curl -H 'Host: app.hubonews.com' -H 'Cookie: gr_user_id=0ab124e7-108a-4a4e-9ce2-9a417b1bd9d3' -H 'x_client_app: com.tigerye.tigerobo' -H 'user-agent: tigerobo/2.8.7 (iPhone; iOS 14.5.1; Scale/3.00)' -H 'brand_product: Apple-iPhone11,6' -H 'x_client_version: 2.8.7' -H 'x_client_idfa: ' -H 'device_id: 160925EB-BF27-4001-855E-E4809302AD0C' -H 'x_client_channel: App Store' -H 'x_client_platform: iOS' -H 'x_client_country: CN' -H 'accept-language: zh-Hans-CN;q=1' -H 'x_client_build: 253' -H 'api_authorization: ULBoPLKVKIiEOlxZjSPz' -H 'x_client_translation_language: en' -H 'accept: */*' -H 'content-type: application/json' -H 'x_client_language: zh' --compressed 'https://app.hubonews.com/v1/activity/signin/record?month='
+
+### 签到
+curl -H 'Host: app.hubonews.com' -H 'Cookie: gr_user_id=0ab124e7-108a-4a4e-9ce2-9a417b1bd9d3' -H 'x_client_app: com.tigerye.tigerobo' -H 'user-agent: tigerobo/2.8.7 (iPhone; iOS 14.5.1; Scale/3.00)' -H 'brand_product: Apple-iPhone11,6' -H 'x_client_version: 2.8.7' -H 'x_client_idfa: ' -H 'device_id: 160925EB-BF27-4001-855E-E4809302AD0C' -H 'x_client_channel: App Store' -H 'x_client_platform: iOS' -H 'x_client_country: CN' -H 'accept-language: zh-Hans-CN;q=1' -H 'x_client_build: 253' -H 'api_authorization: ULBoPLKVKIiEOlxZjSPz' -H 'x_client_translation_language: en' -H 'accept: */*' -H 'content-type: application/json' -H 'x_client_language: zh' --data-binary "{}" --compressed 'https://app.hubonews.com/v1/activity/signin'
+curl -H 'Host: app.hubonews.com' -H 'Cookie: gr_user_id=0ab124e7-108a-4a4e-9ce2-9a417b1bd9d3' -H 'x_client_app: com.tigerye.tigerobo' -H 'user-agent: tigerobo/2.8.7 (iPhone; iOS 14.5.1; Scale/3.00)' -H 'brand_product: Apple-iPhone11,6' -H 'x_client_version: 2.8.7' -H 'x_client_idfa: ' -H 'device_id: 160925EB-BF27-4001-855E-E4809302AD0C' -H 'x_client_channel: App Store' -H 'x_client_platform: iOS' -H 'x_client_country: CN' -H 'accept-language: zh-Hans-CN;q=1' -H 'x_client_build: 253' -H 'api_authorization: ULBoPLKVKIiEOlxZjSPz' -H 'x_client_translation_language: en' -H 'accept: */*' -H 'content-type: application/json' -H 'x_client_language: zh' --compressed 'https://app.hubonews.com/v1/activity/signin/record?month=202106'
