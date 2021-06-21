@@ -682,10 +682,10 @@ if __name__ == '__main__':
 
         fhxz.exit()
 
-        if not (8 <= datetime.datetime.now().hour < 25):
+        if not (8 <= datetime.datetime.now().hour < 22):
             break
 
-        random_sleep = random.randint(120, 1500)
+        random_sleep = random.randint(120, 150)
         print(f'休息{random_sleep}秒', flush=True)
         time.sleep(random_sleep)
 
