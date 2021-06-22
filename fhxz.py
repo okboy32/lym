@@ -666,7 +666,7 @@ class Fhxz:
 
 
 if __name__ == '__main__':
-    target_times = random.randint(16, 30)
+    target_times = random.randint(30, 60)
     fhxz = Fhxz()
 
     while fhxz.success_time <= target_times or fhxz.speed_times > 0:
