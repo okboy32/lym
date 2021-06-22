@@ -299,32 +299,14 @@ let ucpigappkey = $[get_data_('5', 'B]dO')]('ucpigappkey');
         if (_0x36331c.GroOa(_0x36331c['pQDYw'], _0x36331c.pQDYw)) {
           return !![];
         } else {
+          console.log('get_data_(\'3f\', \'PIyv\')', get_data_('3f', 'PIyv'));
+          console.log('get_data_(\'40\', \'6fqO\')', get_data_('40', '6fqO'));
+          console.log('get_data_(\'41\', \'E$]n\')', get_data_('41', 'E$]n'));
+          console.log('get_data_(\'42\', \'#[HO\')', get_data_('42', '#[HO'));
+
+
           $[get_data_('3f', 'PIyv')](get_data_('40', '6fqO') + $['name'] + get_data_('41', 'E$]n') + _0x36331c[get_data_('42', '#[HO')](_0x4f6326, 0x1) + get_data_('43', 'X%O^'));
           await main(_0x4f6326);
-          $.log('🗝[' + $.name + ']:开始验证~用户' + _0x36331c['xMJKg'](_0x4f6326, 0x1) + '-脚本使用权限...');
-          if (!_0x36331c['vVZev'](z, _0x4f6326)) {
-            $['log']('用户' + _0x36331c[get_data_('3c', 'rhLV')](_0x4f6326, 0x1) + get_data_('3d', '^o(K') + tkList['uid'] + get_data_('3e', '*I$)'));
-            $[get_data_('3f', 'PIyv')](get_data_('40', '6fqO') + $['name'] + get_data_('41', 'E$]n') + _0x36331c[get_data_('42', '#[HO')](_0x4f6326, 0x1) + get_data_('43', 'X%O^'));
-            await main(_0x4f6326);
-          } else {
-            $[get_data_('44', '#[HO')]('用户' + (_0x4f6326 + 0x1) + '(ID:' + tkList['uid'] + get_data_('45', '8[YI'));
-            $[get_data_('46', '@KO^')](get_data_('47', 'Xz4F') + $[get_data_('48', '!#cs')] + get_data_('49', 'HEL4'));
-            await githubkey(get_data_('4a', 'X%O^'));
-            $[get_data_('4b', 'hb!S')]('\x0a🗝[' + $[get_data_('4c', 'e(v&')] + ']:再次验证~用户' + (_0x4f6326 + 0x1) + get_data_('4d', 't8]F'));
-            if (z()) {
-              $[get_data_('4b', 'hb!S')]('用户' + _0x36331c[get_data_('4e', 'Z0P!')](_0x4f6326, 0x1) + get_data_('4f', ')zH[') + tkList[get_data_('50', '!#cs')] + get_data_('51', 'Z0P!'));
-              $[get_data_('52', '19Fz')](get_data_('53', '!#cs') + $['name'] + get_data_('54', '8[YI') + _0x36331c[get_data_('55', 'C$yt')](_0x4f6326, 0x1) + '的脚本任务');
-              await _0x36331c[get_data_('56', 'SiB9')](main, _0x4f6326);
-            } else {
-              if (_0x36331c[get_data_('57', 'vrHP')](_0x36331c['TbENS'], _0x36331c[get_data_('58', 'eOky')])) {
-                $[get_data_('59', '7!fg')]('❌用户' + _0x36331c[get_data_('5a', 'AsL3')](_0x4f6326, 0x1) + get_data_('4f', ')zH[') + tkList[get_data_('5b', '7!fg')] + get_data_('5c', ']r2M'));
-                $[get_data_('5d', ']r2M')]('\x0a⚠️用户' + _0x36331c['RJztK'](_0x4f6326, 0x1) + ':~\x20请在群内提交互助码,如果已提交请稍后再试试。\x0a🔺验证码提交格式:' + tgmarkcode + tkList[get_data_('5e', 't8]F')]);
-                $[get_data_('5f', ']r2M')]($[get_data_('60', ')zH[')], '', get_data_('61', 'NU8s') + _0x36331c['TsQco'](_0x4f6326, 0x1) + get_data_('62', '$XA%') + tgmarkcode + tkList[get_data_('22', 'RRdP')]);
-              } else {
-                console['log'](get_data_('63', 's@YP'));
-              }
-            }
-          }
         }
       }
     }
