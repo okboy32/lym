@@ -399,14 +399,14 @@ async function main(_0x2bceda) {
   Object.keys(tkList).forEach(key => {
       $.log(`key: ${key}, value:${tkList[key]}\n`)
   })
-  // !tkList.pigawardbody ? $.log('[Tips]请先前往获取 收元宝cookie 📲') : await pigAward();
+  !tkList.pigawardbody ? $.log('[Tips]请先前往获取 收元宝cookie 📲') : await pigAward();
   console.log('\x0a🐷[' + $.name + ']:~ User' + (_0x2bceda + 0x1) + '💲测试执行视频任务');
   !tkList.videotask1 ? $.log('[Tips]请先前往获取 第一天任务数据 📲') : await videoTaskTest1();
   !tkList.videotask2 ? $.log('[Tips]请先前往获取 第二天任务数据 📲') : await videoTaskTest2();
   console.log('🐷[' + $.name + ']:~ User' + (_0x2bceda + 0x1) + '💲测试领取视频奖励');
   await videoAwardTest();
-  return;
-  if (_0x3bbdc9[get_data_('96', 'e(v&')](awardstate, 0x2)) {
+  $.log(`awardstate:${awardstate}\t${0x2}`);
+  if (awardstate === 0x2) {
     if (_0x3bbdc9['mRxFG'] !== _0x3bbdc9[get_data_('97', '5fpv')]) {
       for (var _0x1ab57d = 0x0; _0x3bbdc9['anXxV'](_0x1ab57d, tkList[get_data_('98', 'WDnQ')][get_data_('99', 'PIyv')]); _0x1ab57d++) {
         await _0x3bbdc9[get_data_('9a', 'PIyv')](videoAward, _0x1ab57d);
@@ -424,6 +424,7 @@ async function main(_0x2bceda) {
     }
   }
   console[get_data_('a1', 'Z0P!')](get_data_('a2', '#[HO') + $['name'] + get_data_('a3', ')zH[') + (_0x2bceda + 0x1) + get_data_('a4', 's@YP'));
+  return;
   !tkList[get_data_('a5', '^o(K')] ? $.log(get_data_('a6', 'e(v&')) : await exchangeMoney();
   var _0x23e819 = new Date()[get_data_('a7', 'rhLV')]();
   var _0x1ab57d = new Date()[get_data_('a8', 'e(v&')]();
