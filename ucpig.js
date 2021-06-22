@@ -346,18 +346,18 @@ function z() {
   }
 }
 
-function initTaskOptions(_0x29883e, _0x35222b) {
+function initTaskOptions(url, body) {
   return {
-    'url': '' + _0x29883e,
+    'url': url,
     'headers': {
-      'Accept': get_data_('73', 'QA&B'),
-      'Origin': get_data_('74', 'hb!S'),
-      'Connection': get_data_('75', 'E$]n'),
-      'Accept-Encoding': get_data_('76', 'RRdP'),
-      'User-Agent': get_data_('77', 'B]dO'),
-      'Accept-Language': get_data_('78', 'e(v&')
+      'Accept': '*/*',
+      'Origin': 'https://broccoli.uc.cn',
+      'Connection': 'keep-alive',
+      'Accept-Encoding': 'gzip, deflate',
+      'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X; zh-CN) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/12H143 UCBrowser/13.3.3.1458 Mobile UCWebARUA\n',
+      'Accept-Language': 'zh-cn'
     },
-    'body': _0x35222b
+    'body': body
   };
 }
 
@@ -365,11 +365,15 @@ async function main(_0x2bceda) {
   var _0x3bbdc9 = {
     'hlBnz': function (_0xa6039f, _0x277117) {
       return _0xa6039f > _0x277117;
-    }, 'sYAUZ': function (_0x8bc249) {
+    },
+    'sYAUZ': function (_0x8bc249) {
       return _0x8bc249();
-    }, 'QcNix': function (_0x47007f, _0x3d8121) {
+    },
+    'QcNix': function (_0x47007f, _0x3d8121) {
       return _0x47007f + _0x3d8121;
-    }, 'IXHJZ': get_data_('79', '5fpv'), 'eSbFO': function (_0x2e8a65) {
+    },
+    'IXHJZ': '[Tips]请先前往获取 收元宝cookie 📲',
+    'eSbFO': function (_0x2e8a65) {
       return _0x2e8a65();
     }, 'IOGpM': function (_0x5e1b35, _0x2c8499) {
       return _0x5e1b35 + _0x2c8499;
@@ -391,9 +395,12 @@ async function main(_0x2bceda) {
   };
   console.log('🐷[' + $.name + ']:~\x20User' + (_0x2bceda + 0x1) + '💲查询元宝数量');
   await getUserInfo();
-  return;
   console.log('\x0a🐷[' + $['name'] + ']:~ User' + (_0x2bceda + 0x1) + '💲收小猪扑满的元宝\n');
-  !tkList[get_data_('87', 'Kdeb')] ? $.log(_0x3bbdc9['IXHJZ']) : await _0x3bbdc9['eSbFO'](pigAward);
+    Object.keys(key => {
+      console.log(`key: ${key}, value:${tkList[key]}`)
+  })
+  !tkList.pigawardbody ? $.log('[Tips]请先前往获取 收元宝cookie 📲') : await pigAward();
+  return;
   ;console[get_data_('88', 'RRdP')]('\x0a🐷[' + $[get_data_('89', '19Fz')] + get_data_('8a', '2YqD') + _0x3bbdc9[get_data_('8b', 'HEL4')](_0x2bceda, 0x1) + get_data_('8c', 'EJiT'));
   !tkList['videotask1'] ? $.log(_0x3bbdc9[get_data_('8d', 'C$yt')]) : await _0x3bbdc9['eSbFO'](videoTaskTest1);
   !tkList[get_data_('8e', '7!fg')] ? $[get_data_('8f', ')zH[')](_0x3bbdc9[get_data_('90', 'euEy')]) : await _0x3bbdc9[get_data_('91', 'DsER')](videoTaskTest2);
