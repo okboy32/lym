@@ -713,7 +713,7 @@ async function videoTaskTest1() {
             switch (videotest) {
               case false:
                 const state = data.data.state
-                if (state !== 3) {
+                if (state === 3) {
                   console.log(`→测试结果:使用【第一天】的任务组,开始执行任务\n`);
                   for (let k = 0; k < tkList.videotask1.length; k++) {
                     await videoTaskDay1(k);
@@ -761,7 +761,7 @@ async function videoTaskTest2() {
             switch (videotest) {
               case false:
                 const state = data.data.state
-                if (state !== 3) {
+                if (state === 3) {
                   console.log(`→测试结果:使用【第二天】的任务组,开始执行任务\n`);
                   for (let h = 0; h < tkList.videotask2.length; h++) {
                     await videoTaskDay2(h);
