@@ -274,7 +274,6 @@ let ucpigappkey = $[get_data_('5', 'B]dO')]('ucpigappkey');
   cc = $.name + '任务执行通知🔔';
   console.log(_0x36331c.uJzsp);
   console['log']('Now\x20login(UTC+8):' + new Date(new Date().getTime()).toLocaleString());
-  console.info(ucpigappkey)
   if (_0x36331c.yovLO(typeof $request, _0x36331c[get_data_('12', 'C$yt')])) {
     $[get_data_('13', 'rhLV')]('[Tips]请先前往获取cookie📲');
   } else if (ucpigappkey) {
