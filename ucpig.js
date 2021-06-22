@@ -563,6 +563,7 @@ async function videoAward(m) {
           if (safeGet(data)) {
             // $.log(data)
             data = JSON.parse(data);
+            $.log(data)
             const code = data.code
             switch (code) {
               case "REPEAT_REQUEST_ID":
@@ -600,7 +601,7 @@ async function videoAwardTest() {
           $.logErr(err);
         } else {
           if (safeGet(data)) {
-            // $.log(data)
+            $.log(data)
             data = JSON.parse(data);
             awardtest = data.success
             awardstate = data.data.state
@@ -666,6 +667,7 @@ async function videoTaskDay1(k) {
           if (safeGet(data)) {
             // $.log(data)
             data = JSON.parse(data);
+            $.log(data)
             const code = data.code
             switch (code) {
               case "REPEAT_REQUEST_ID":
@@ -707,6 +709,7 @@ async function videoTaskTest1() {
           if (safeGet(data)) {
             // $.log(data)
             data = JSON.parse(data);
+            $.log(data)
             const videotest = data.success
             switch (videotest) {
               case true:
