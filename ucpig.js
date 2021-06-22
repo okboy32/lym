@@ -401,7 +401,7 @@ async function main(_0x2bceda) {
   })
   !tkList.pigawardbody ? $.log('[Tips]请先前往获取 收元宝cookie 📲') : await pigAward();
   console.log('\x0a🐷[' + $.name + ']:~ User' + (_0x2bceda + 0x1) + '💲测试执行视频任务');
-  !tkList.videotask1 ? $.log('[Tips]请先前往获取 第一天任务数据 📲') : await videoTaskTest1();
+  // !tkList.videotask1 ? $.log('[Tips]请先前往获取 第一天任务数据 📲') : await videoTaskTest1();
   !tkList.videotask2 ? $.log('[Tips]请先前往获取 第二天任务数据 📲') : await videoTaskTest2();
   console.log('🐷[' + $.name + ']:~ User' + (_0x2bceda + 0x1) + '💲测试领取视频奖励');
   await videoAwardTest();
