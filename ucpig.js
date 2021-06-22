@@ -401,7 +401,7 @@ async function main(_0x2bceda) {
   })
   !tkList.pigawardbody ? $.log('[Tips]请先前往获取 收元宝cookie 📲') : await pigAward();
   console.log('\x0a🐷[' + $.name + ']:~ User' + (_0x2bceda + 0x1) + '💲测试执行视频任务');
-  // !tkList.videotask1 ? $.log('[Tips]请先前往获取 第一天任务数据 📲') : await videoTaskTest1();
+  !tkList.videotask1 ? $.log('[Tips]请先前往获取 第一天任务数据 📲') : await videoTaskTest1();
   !tkList.videotask2 ? $.log('[Tips]请先前往获取 第二天任务数据 📲') : await videoTaskTest2();
   console.log('🐷[' + $.name + ']:~ User' + (_0x2bceda + 0x1) + '💲测试领取视频奖励');
   await videoAwardTest();
@@ -588,7 +588,7 @@ async function videoAward(m) {
 
 //视频奖励测试
 async function videoAwardTest() {
-  let testArrNum = 5;
+  let testArrNum = Random(0, tkList.videoaward.length)
   console.log(`→随机测试奖励数据:第${testArrNum + 1}个数据`);
   return new Promise((resolve) => {
     const options = initTaskOptions(tkList.videoaward[testArrNum]);
@@ -742,7 +742,7 @@ async function videoTaskTest1() {
 
 async function videoTaskTest2() {
   return new Promise((resolve) => {
-    let testArrNum = 5;
+    let testArrNum = Random(0, tkList.videotask2.length)
     console.log(`→随机测试视频第二组:第${testArrNum + 1}个数据`);
     const options = initTaskOptions(tkList.videotask2[testArrNum]);
     $.get(options, async (err, resp, data) => {
