@@ -397,7 +397,7 @@ async function main(_0x2bceda) {
   await getUserInfo();
   console.log('\x0a🐷[' + $['name'] + ']:~ User' + (_0x2bceda + 0x1) + '💲收小猪扑满的元宝\n');
     Object.keys(key => {
-      $.log(`key: ${key}, value:${tkList[key]}`)
+      $.log(`key: ${key}, value:${tkList[key]}\n`)
   })
   !tkList.pigawardbody ? $.log('[Tips]请先前往获取 收元宝cookie 📲') : await pigAward();
   return;
