@@ -129,14 +129,14 @@ class XiMei:
         }
 
         data = self.request(method='get', url='https://app.hubonews.com/v1/activity/signin/record', params=params)
-        pprint(data)
+        # pprint(data)
 
     def _qiandao(self):
 
         data = {}
 
         data = self.request(url='https://app.hubonews.com/v1/activity/signin', json=data)
-        pprint(data)
+        # pprint(data)
 
     def qiandao(self):
         self.random_wait(1, 2)
@@ -175,15 +175,70 @@ class XiMei:
 
 
 if __name__ == '__main__':
-    # ximei = XiMei()
-    # ximei.support_comment(3477873, 1434552)
     accounts = [{
         'user_id': '0ab124e7-108a-4a4e-9ce2-9a417b1bd9d3',
-        'headers': '',
+        'headers': {
+            'Host': 'app.hubonews.com',
+            'x_client_app': 'com.tigerye.tigerobo',
+            'user-agent': 'tigerobo/2.8.7 (iPhone; iOS 14.5.1; Scale/3.00)',
+            'brand_product': 'Apple-iPhone11,6',
+            'x_client_version': '2.8.7',
+            'x_client_idfa': '',
+            'device_id': '160925AB-BA27-4201-855E-E4809302CD0D',
+            'x_client_channel': 'App Store',
+            'x_client_platform': 'iOS',
+            'x_client_country': 'CN',
+            'accept-language': 'zh-Hans-CN;q=1',
+            'x_client_build': '253',
+            'api_authorization': 'FOhHvOoF0D0BtzFcvqtp',
+            'x_client_translation_language': 'en',
+            'accept': '*/*',
+            'content-type': 'application/json',
+            'x_client_language': 'zh',
+        },
     }, {
         'user_id': 'd311fa0b-540a-42d9-97da-6af264ab75d8',
-        'headers': '',
-    }]
+        'headers': {
+            'Host': 'app.hubonews.com',
+            'x_client_app': 'com.tigerye.tigerobo',
+            'user-agent': 'tigerobo/2.8.7 (iPhone; iOS 14.5.1; Scale/3.00)',
+            'brand_product': 'Apple-iPhone11,6',
+            'x_client_version': '2.8.7',
+            'x_client_idfa': '',
+            'device_id': '70A73029-87AC-427A-BBD9-15EF443BED30',
+            'x_client_channel': 'App Store',
+            'x_client_platform': 'iOS',
+            'x_client_country': 'CN',
+            'accept-language': 'zh-Hans-CN;q=1',
+            'x_client_build': '253',
+            'api_authorization': 'idyyPnwEmfw0BGFXkuZr',
+            'x_client_translation_language': 'en',
+            'accept': '*/*',
+            'content-type': 'application/json',
+            'x_client_language': 'zh',
+        },
+    }, {
+        'user_id': '0ab124e7-108a-4a4e-9ce2-9a417b1bd9d3',
+        'headers': {
+            'Host': 'app.hubonews.com',
+            'x_client_app': 'com.tigerye.tigerobo',
+            'user-agent': 'tigerobo/2.8.7 (iPhone; iOS 14.5.1; Scale/3.00)',
+            'brand_product': 'Apple-iPhone11,6',
+            'x_client_version': '2.8.7',
+            'x_client_idfa': '',
+            'device_id': '160925EB-BF27-4001-855E-E4809302AD0C',
+            'x_client_channel': 'App Store',
+            'x_client_platform': 'iOS',
+            'x_client_country': 'CN',
+            'accept-language': 'zh-Hans-CN;q=1',
+            'x_client_build': '253',
+            'api_authorization': 'ULBoPLKVKIiEOlxZjSPz',
+            'x_client_translation_language': 'en',
+            'accept': '*/*',
+            'content-type': 'application/json',
+            'x_client_language': 'zh',
+        },
+    },]
     for account in accounts:
         ximei = XiMei.create(**account)
         ximei.run()
