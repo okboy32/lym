@@ -707,9 +707,8 @@ async function videoTaskTest1() {
           $.logErr(err);
         } else {
           if (safeGet(data)) {
-            // $.log(data)
-            data = JSON.parse(data);
             $.log(data)
+            data = JSON.parse(data);
             const videotest = data.success
             switch (videotest) {
               case true:
@@ -756,7 +755,7 @@ async function videoTaskTest2() {
           $.logErr(err);
         } else {
           if (safeGet(data)) {
-            // $.log(data)
+            $.log(data)
             data = JSON.parse(data);
             const videotest = data.success
             switch (videotest) {
