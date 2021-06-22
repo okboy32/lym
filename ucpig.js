@@ -667,7 +667,6 @@ async function videoTaskDay1(k) {
           if (safeGet(data)) {
             // $.log(data)
             data = JSON.parse(data);
-            $.log(data)
             const code = data.code
             switch (code) {
               case "REPEAT_REQUEST_ID":
@@ -707,13 +706,13 @@ async function videoTaskTest1() {
           $.logErr(err);
         } else {
           if (safeGet(data)) {
-            $.log(data)
+            // $.log(data)
             data = JSON.parse(data);
             const videotest = data.success
             switch (videotest) {
-              case false:
+              case true:
                 const state = data.data.state
-                if (state === 3) {
+                if (state !== 3) {
                   console.log(`→测试结果:使用【第一天】的任务组,开始执行任务\n`);
                   for (let k = 0; k < tkList.videotask1.length; k++) {
                     await videoTaskDay1(k);
@@ -725,7 +724,7 @@ async function videoTaskTest1() {
                   console.log(`→测试结果1:可执行任务已完成🎉\n[Tips]如果结果不正确请重新执行脚本`);
                 }
                 break;
-              case true:
+              case false:
                 console.log(`→测试结果1:可执行任务已完成🎉\n[Tips]如果结果不正确请重新执行脚本`);
                 break;
               default:
@@ -755,13 +754,13 @@ async function videoTaskTest2() {
           $.logErr(err);
         } else {
           if (safeGet(data)) {
-            $.log(data)
+            // $.log(data)
             data = JSON.parse(data);
             const videotest = data.success
             switch (videotest) {
-              case false:
+              case true:
                 const state = data.data.state
-                if (state === 3) {
+                if (state !== 3) {
                   console.log(`→测试结果:使用【第二天】的任务组,开始执行任务\n`);
                   for (let h = 0; h < tkList.videotask2.length; h++) {
                     await videoTaskDay2(h);
@@ -773,7 +772,7 @@ async function videoTaskTest2() {
                   console.log(`→测试结果2:可执行任务已完成🎉\n[Tips]如果结果不正确请重新执行脚本`);
                 }
                 break;
-              case true:
+              case false:
                 console.log(`→测试结果2:可执行任务已完成🎉\n[Tips]如果结果不正确请重新执行脚本`);
                 break;
               default:
