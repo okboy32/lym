@@ -306,6 +306,7 @@ let ucpigappkey = $[get_data_('5', 'B]dO')]('ucpigappkey');
 
 
           $[get_data_('3f', 'PIyv')](get_data_('40', '6fqO') + $['name'] + get_data_('41', 'E$]n') + _0x36331c[get_data_('42', '#[HO')](_0x4f6326, 0x1) + get_data_('43', 'X%O^'));
+          return;
           await main(_0x4f6326);
         }
       }
