@@ -8,6 +8,7 @@ import requests
 
 
 class XiMei:
+    ST = '@123hb#*^&xiMEI99'
 
     def __init__(self, user_id, headers):
         # self.user_id = '0ab124e7-108a-4a4e-9ce2-9a417b1bd9d3'
