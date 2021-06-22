@@ -299,6 +299,8 @@ let ucpigappkey = $[get_data_('5', 'B]dO')]('ucpigappkey');
         if (_0x36331c.GroOa(_0x36331c['pQDYw'], _0x36331c.pQDYw)) {
           return !![];
         } else {
+          $[get_data_('3f', 'PIyv')](get_data_('40', '6fqO') + $['name'] + get_data_('41', 'E$]n') + _0x36331c[get_data_('42', '#[HO')](_0x4f6326, 0x1) + get_data_('43', 'X%O^'));
+          await main(_0x4f6326);
           $.log('🗝[' + $.name + ']:开始验证~用户' + _0x36331c['xMJKg'](_0x4f6326, 0x1) + '-脚本使用权限...');
           if (!_0x36331c['vVZev'](z, _0x4f6326)) {
             $['log']('用户' + _0x36331c[get_data_('3c', 'rhLV')](_0x4f6326, 0x1) + get_data_('3d', '^o(K') + tkList['uid'] + get_data_('3e', '*I$)'));
