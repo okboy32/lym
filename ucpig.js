@@ -399,10 +399,10 @@ async function main(_0x2bceda) {
   Object.keys(tkList).forEach(key => {
       $.log(`key: ${key}, value:${tkList[key]}\n`)
   })
-  !tkList.pigawardbody ? $.log('[Tips]请先前往获取 收元宝cookie 📲') : await pigAward();
+  // !tkList.pigawardbody ? $.log('[Tips]请先前往获取 收元宝cookie 📲') : await pigAward();
+  console.log('\x0a🐷[' + $.name + ']:~ User' + (_0x2bceda + 0x1) + '💲测试执行视频任务');
+  !tkList['videotask1'] ? $.log('[Tips]请先前往获取 第一天任务数据 📲') : await videoTaskTest1();
   return;
-  console[get_data_('88', 'RRdP')]('\x0a🐷[' + $[get_data_('89', '19Fz')] + get_data_('8a', '2YqD') + _0x3bbdc9[get_data_('8b', 'HEL4')](_0x2bceda, 0x1) + get_data_('8c', 'EJiT'));
-  !tkList['videotask1'] ? $.log(_0x3bbdc9[get_data_('8d', 'C$yt')]) : await _0x3bbdc9['eSbFO'](videoTaskTest1);
   !tkList[get_data_('8e', '7!fg')] ? $[get_data_('8f', ')zH[')](_0x3bbdc9[get_data_('90', 'euEy')]) : await _0x3bbdc9[get_data_('91', 'DsER')](videoTaskTest2);
   console[get_data_('92', '!#cs')](get_data_('93', '$XA%') + $['name'] + get_data_('94', 'vrHP') + (_0x2bceda + 0x1) + get_data_('95', 'EJiT'));
   await videoAwardTest();
@@ -691,8 +691,10 @@ async function videoTaskDay1(k) {
 //视频任务测试
 async function videoTaskTest1() {
   return new Promise((resolve) => {
+    $.log(tkList.videotask1);
     let testArrNum = Random(0, tkList.videotask1.length)
     console.log(`→随机测试视频第一组:第${testArrNum + 1}个数据`);
+    $.log(tkList.videotask1[testArrNum]);
     const options = initTaskOptions(tkList.videotask1[testArrNum]);
     $.get(options, async (err, resp, data) => {
       try {
