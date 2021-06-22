@@ -300,16 +300,16 @@ let ucpigappkey = $[get_data_('5', 'B]dO')]('ucpigappkey');
     }));
     console.log(get_data_('2f', '8uVa') + $.name + ']:~\x20System💲脚本账号数量\x20');
     console.log(get_data_('32', '19Fz') + _0x2d4bbc.length + '个账号');
-    for (let _0x4f6326 = 0x0; _0x36331c['vEvla'](_0x4f6326, _0x2d4bbc[get_data_('34', 'Z0P!')]); _0x4f6326++) {
+    for (let _0x4f6326 = 0x0; _0x36331c['vEvla'](_0x4f6326, _0x2d4bbc.length); _0x4f6326++) {
       tkList = _0x2d4bbc[_0x4f6326];
       if (!tkList[get_data_('35', '19Fz')]) {
-        $['log'](_0x36331c[get_data_('36', 'SiB9')]);
+        $['log'](_0x36331c.uid);
       } else {
-        if (_0x36331c[get_data_('37', 'EJiT')](_0x36331c['pQDYw'], _0x36331c[get_data_('38', '@KO^')])) {
+        if (_0x36331c.GroOa(_0x36331c['pQDYw'], _0x36331c.pQDYw)) {
           return !![];
         } else {
-          $[get_data_('39', 'Xz4F')](get_data_('3a', 'SiB9') + $[get_data_('3b', 'PIyv')] + ']:开始验证~用户' + _0x36331c['xMJKg'](_0x4f6326, 0x1) + '-脚本使用权限...');
-          if (_0x36331c['vVZev'](z, _0x4f6326)) {
+          $.log('🗝[' + $.name + ']:开始验证~用户' + _0x36331c['xMJKg'](_0x4f6326, 0x1) + '-脚本使用权限...');
+          if (!_0x36331c['vVZev'](z, _0x4f6326)) {
             $['log']('用户' + _0x36331c[get_data_('3c', 'rhLV')](_0x4f6326, 0x1) + get_data_('3d', '^o(K') + tkList['uid'] + get_data_('3e', '*I$)'));
             $[get_data_('3f', 'PIyv')](get_data_('40', '6fqO') + $['name'] + get_data_('41', 'E$]n') + _0x36331c[get_data_('42', '#[HO')](_0x4f6326, 0x1) + get_data_('43', 'X%O^'));
             await main(_0x4f6326);
@@ -423,7 +423,7 @@ async function main(_0x2bceda) {
   console[get_data_('7f', 'RHv!')](get_data_('80', 'eOky') + $[get_data_('81', 'ow(k')] + ']:~\x20User' + (_0x2bceda + 0x1) + get_data_('82', 'vrHP'));
   await _0x3bbdc9[get_data_('83', 'DsER')](getUserInfo);
   console[get_data_('3f', 'PIyv')]('\x0a🐷[' + $['name'] + get_data_('84', '5fpv') + _0x3bbdc9[get_data_('85', 'B]dO')](_0x2bceda, 0x1) + get_data_('86', 'B]dO'));
-  !tkList[get_data_('87', 'Kdeb')] ? $[get_data_('39', 'Xz4F')](_0x3bbdc9['IXHJZ']) : await _0x3bbdc9['eSbFO'](pigAward);
+  !tkList[get_data_('87', 'Kdeb')] ? $.log(_0x3bbdc9['IXHJZ']) : await _0x3bbdc9['eSbFO'](pigAward);
   ;console[get_data_('88', 'RRdP')]('\x0a🐷[' + $[get_data_('89', '19Fz')] + get_data_('8a', '2YqD') + _0x3bbdc9[get_data_('8b', 'HEL4')](_0x2bceda, 0x1) + get_data_('8c', 'EJiT'));
   !tkList['videotask1'] ? $.log(_0x3bbdc9[get_data_('8d', 'C$yt')]) : await _0x3bbdc9['eSbFO'](videoTaskTest1);
   !tkList[get_data_('8e', '7!fg')] ? $[get_data_('8f', ')zH[')](_0x3bbdc9[get_data_('90', 'euEy')]) : await _0x3bbdc9[get_data_('91', 'DsER')](videoTaskTest2);
