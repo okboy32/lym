@@ -692,10 +692,10 @@ async function videoTaskDay1(k) {
 //视频任务测试
 async function videoTaskTest1() {
   return new Promise((resolve) => {
-    $.log(tkList.videotask1);
+    // $.log(tkList.videotask1);
     let testArrNum = Random(0, tkList.videotask1.length)
     console.log(`→随机测试视频第一组:第${testArrNum + 1}个数据`);
-    $.log(tkList.videotask1[testArrNum]);
+    // $.log(tkList.videotask1[testArrNum]);
     const options = initTaskOptions(tkList.videotask1[testArrNum]);
     $.get(options, async (err, resp, data) => {
       try {
