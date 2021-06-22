@@ -711,7 +711,7 @@ async function videoTaskTest1() {
             data = JSON.parse(data);
             const videotest = data.success
             switch (videotest) {
-              case true:
+              case false:
                 const state = data.data.state
                 if (state !== 3) {
                   console.log(`→测试结果:使用【第一天】的任务组,开始执行任务\n`);
@@ -725,7 +725,7 @@ async function videoTaskTest1() {
                   console.log(`→测试结果1:可执行任务已完成🎉\n[Tips]如果结果不正确请重新执行脚本`);
                 }
                 break;
-              case false:
+              case true:
                 console.log(`→测试结果1:可执行任务已完成🎉\n[Tips]如果结果不正确请重新执行脚本`);
                 break;
               default:
@@ -759,7 +759,7 @@ async function videoTaskTest2() {
             data = JSON.parse(data);
             const videotest = data.success
             switch (videotest) {
-              case true:
+              case false:
                 const state = data.data.state
                 if (state !== 3) {
                   console.log(`→测试结果:使用【第二天】的任务组,开始执行任务\n`);
@@ -773,7 +773,7 @@ async function videoTaskTest2() {
                   console.log(`→测试结果2:可执行任务已完成🎉\n[Tips]如果结果不正确请重新执行脚本`);
                 }
                 break;
-              case false:
+              case true:
                 console.log(`→测试结果2:可执行任务已完成🎉\n[Tips]如果结果不正确请重新执行脚本`);
                 break;
               default:
