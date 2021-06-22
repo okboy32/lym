@@ -276,15 +276,6 @@ let ucpigappkey = $[get_data_('5', 'B]dO')]('ucpigappkey');
   console['log']('Now\x20login(UTC+8):' + new Date(new Date().getTime()).toLocaleString());
   if (_0x36331c.yovLO(typeof $request, _0x36331c[get_data_('12', 'C$yt')])) {
     $[get_data_('13', 'rhLV')]('[Tips]请先前往获取cookie📲');
-  } else if (ucpigappkey) {
-    if (_0x36331c[get_data_('14', '$cC&')](get_data_('15', '^o(K'), _0x36331c['gjWde'])) {
-      $['log']('\x0a🤖[' + $['name'] + get_data_('16', 'Z0P!'));
-      await _0x36331c['kYKQJ'](githubkey);
-    } else {
-      $[get_data_('17', '$XA%')](get_data_('18', '7!fg') + _0x36331c[get_data_('19', '$XA%')](i, 0x1) + '(ID:' + tkList[get_data_('1a', 's@YP')] + get_data_('1b', 'rhLV'));
-      $['log']('\x0a⚠️用户' + _0x36331c[get_data_('1c', 'hb!S')](i, 0x1) + get_data_('1d', 'e(v&') + tgmarkcode + tkList[get_data_('1e', 'HEL4')]);
-      $[get_data_('1f', '8[YI')]($[get_data_('20', '8[UU')], '', '⚠️用户' + (i + 0x1) + get_data_('21', 'eOky') + tgmarkcode + tkList[get_data_('22', 'RRdP')]);
-    }
   } else {
     let _0x2d4bbc = ucpigapp.filter(_0x3f4e00 => _0x3f4e00['hd']).map(_0x2d3d83 => ({
       'uid': _0x2d3d83.uid,
@@ -309,7 +300,7 @@ let ucpigappkey = $[get_data_('5', 'B]dO')]('ucpigappkey');
           return !![];
         } else {
           $.log('🗝[' + $.name + ']:开始验证~用户' + _0x36331c['xMJKg'](_0x4f6326, 0x1) + '-脚本使用权限...');
-          if (!_0x36331c['vVZev'](z, _0x4f6326)) {
+          if (_0x36331c['vVZev'](z, _0x4f6326)) {
             $['log']('用户' + _0x36331c[get_data_('3c', 'rhLV')](_0x4f6326, 0x1) + get_data_('3d', '^o(K') + tkList['uid'] + get_data_('3e', '*I$)'));
             $[get_data_('3f', 'PIyv')](get_data_('40', '6fqO') + $['name'] + get_data_('41', 'E$]n') + _0x36331c[get_data_('42', '#[HO')](_0x4f6326, 0x1) + get_data_('43', 'X%O^'));
             await main(_0x4f6326);
