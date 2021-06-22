@@ -397,11 +397,11 @@ async function main(_0x2bceda) {
   await getUserInfo();
   console.log('\x0a🐷[' + $['name'] + ']:~ User' + (_0x2bceda + 0x1) + '💲收小猪扑满的元宝\n');
     Object.keys(key => {
-      console.log(`key: ${key}, value:${tkList[key]}`)
+      $.log(`key: ${key}, value:${tkList[key]}`)
   })
   !tkList.pigawardbody ? $.log('[Tips]请先前往获取 收元宝cookie 📲') : await pigAward();
   return;
-  ;console[get_data_('88', 'RRdP')]('\x0a🐷[' + $[get_data_('89', '19Fz')] + get_data_('8a', '2YqD') + _0x3bbdc9[get_data_('8b', 'HEL4')](_0x2bceda, 0x1) + get_data_('8c', 'EJiT'));
+  console[get_data_('88', 'RRdP')]('\x0a🐷[' + $[get_data_('89', '19Fz')] + get_data_('8a', '2YqD') + _0x3bbdc9[get_data_('8b', 'HEL4')](_0x2bceda, 0x1) + get_data_('8c', 'EJiT'));
   !tkList['videotask1'] ? $.log(_0x3bbdc9[get_data_('8d', 'C$yt')]) : await _0x3bbdc9['eSbFO'](videoTaskTest1);
   !tkList[get_data_('8e', '7!fg')] ? $[get_data_('8f', ')zH[')](_0x3bbdc9[get_data_('90', 'euEy')]) : await _0x3bbdc9[get_data_('91', 'DsER')](videoTaskTest2);
   console[get_data_('92', '!#cs')](get_data_('93', '$XA%') + $['name'] + get_data_('94', 'vrHP') + (_0x2bceda + 0x1) + get_data_('95', 'EJiT'));
