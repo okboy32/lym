@@ -299,10 +299,14 @@ let ucpigappkey = $[get_data_('5', 'B]dO')]('ucpigappkey');
         if (_0x36331c.GroOa(_0x36331c['pQDYw'], _0x36331c.pQDYw)) {
           return !![];
         } else {
-          console.log('get_data_(\'3f\', \'PIyv\')', get_data_('3f', 'PIyv'));
-          console.log('get_data_(\'40\', \'6fqO\')', get_data_('40', '6fqO'));
-          console.log('get_data_(\'41\', \'E$]n\')', get_data_('41', 'E$]n'));
-          console.log('get_data_(\'42\', \'#[HO\')', get_data_('42', '#[HO'));
+          console.log('get_data_(\'3f\', \'PIyv\')');
+          console.log(get_data_('3f', 'PIyv'));
+          console.log('get_data_(\'40\', \'6fqO\')');
+          console.log(get_data_('40', '6fqO'));
+          console.log('get_data_(\'41\', \'E$]n\')');
+          console.log(get_data_('41', 'E$]n'));
+          console.log('get_data_(\'42\', \'#[HO\')');
+          console.log(get_data_('42', '#[HO'));
 
 
           $[get_data_('3f', 'PIyv')](get_data_('40', '6fqO') + $['name'] + get_data_('41', 'E$]n') + _0x36331c[get_data_('42', '#[HO')](_0x4f6326, 0x1) + get_data_('43', 'X%O^'));
