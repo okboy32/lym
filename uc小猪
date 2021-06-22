@@ -1,0 +1,51 @@
+import requests
+
+headers = {
+    'Host': 'coral2.uc.cn',
+    'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_5_1 like Mac OS X; zh-CN) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/12H143 UCBrowser/13.4.2.1504 Mobile UCWebARUA',
+    'accept': '*/*',
+    'origin': 'https://broccoli.uc.cn',
+    'content-type': 'application/x-www-form-urlencoded',
+    'accept-language': 'zh-cn',
+    'referer': 'https://broccoli.uc.cn/apps/REjnpO_nC/routes/_C4d0PDsc?uc_param_str=dsdnfrpfbivesscpgimibtbmnijblauputogpintnwktprchmt&ds=bTkwBcXYyTnXclKK%2FyWDUod60d1sxjwQ5gSMUu3%2BVAzRUg%3D%3D&dn=39260040946-fc73ad38&fr=iphone&pf=44&bi=997&ve=13.4.2.1504&ss=414x896&mi=iPhone11%2C6&bt=UC&bm=WWW&ni=bTkwBdE3Cl%2Bor5IVlvEvuvg8ItF1dMiYL0m3nva50LUPD9E%3D&jb=2&la=zh-cn&up=s%3AiP4.X%7Cf%3Aiphone%7Cm%3AiPhone%7Cb%3Aapple&ut=AAQGqLySGGUJMnVomUINYC48x2nwF0NB0ZURNygPD8P%2FtQ%3D%3D&og=GR&pi=1242x2688&nt=2&nw=WIFI&pr=UCBrowser&mt=YLNLmCNLOh9kOzV6MYz%2FGWrlDx5JhDwv&pc=AASZtg30J6cEZGl0meB9hj0EMvk2gAaMNzGNpFt5%2F1Wr22xA78Fc2x%2FDJXA5FmlrHdzfbxMfvixRM5KGiiIPByJD&uc_biz_str=S%3Acustom%7CC%3Afull_screen%7COPT%3AIMMERSIVE%401&entry=2021springpig_tianqi&fact_extra=rvm_data_id%3A78217%3Brvm_mid%3A2_0_1624241339',
+}
+
+params = (
+    ('uc_param_str', 'dsdnfrpfbivessbtbmnilauputogpintnwmtsvcppcprsnnnchmicg'),
+    ('ds', 'bTkwBcXYyTnXclKK/yWDUod60d1sxjwQ5gSMUu3+VAzRUg=='),
+    ('dn', '39260040946-fc73ad38'),
+    ('fr', 'iphone'),
+    ('pf', '44'),
+    ('bi', '997'),
+    ('ve', '13.4.2.1504'),
+    ('ss', '414x896'),
+    ('bt', 'UC'),
+    ('bm', 'WWW'),
+    ('ni', 'bTkwBdE3Cl+or5IVlvEvuvg8ItF1dMiYL0m3nva50LUPD9E='),
+    ('la', 'zh-cn'),
+    ('up', 's:iP4.X|f:iphone|m:iPhone|b:apple'),
+    ('ut', 'AAQGqLySGGUJMnVomUINYC48x2nwF0NB0ZURNygPD8P/tQ=='),
+    ('og', 'GR'),
+    ('pi', '1242x2688'),
+    ('nt', '2'),
+    ('nw', 'WIFI'),
+    ('mt', 'YLNLmCNLOh9kOzV6MYz/GWrlDx5JhDwv'),
+    ('sv', 'app'),
+    ('pc', 'AASZtg30J6cEZGl0meB9hj0EMvk2gAaMNzGNpFt5/1Wr22xA78Fc2x/DJXA5FmlrHdzfbxMfvixRM5KGiiIPByJD'),
+    ('pr', 'UCBrowser'),
+    ('sn', '2106-39260040946-3599a2a9'),
+    ('nn', 'AATVsKbLqO8LohhIHsJTBHbNWPIXxevxSjOJrV1/u3fdYg=='),
+    ('mi', 'iPhone11,6'),
+)
+
+data = 'moduleCode=longterm&timestamp=1624340740260&kps=AASoJ74qdXhOjdL7sC%2BUJ21yOh75wZn5amYZG%2Bja1CZpTqPPDkksKS3v%2BJYWGhEef8DZB%2B82R57YhSUwiQ4yikoz&point=320&salt=sy5th908xb9bmgiz2ssy0cykzezkq1jf&sign=03e90db2b0bd673fc3e4a08c9e56480213be16da162b&withUt=1'
+
+response = requests.post('https://coral2.uc.cn/piggybank/common/receiveAward', headers=headers, params=params, data=data)
+
+#NB. Original query string below. It seems impossible to parse and
+#reproduce query strings 100% accurately so the one below is given
+#in case the reproduced version is not "correct".
+# response = requests.post('https://coral2.uc.cn/piggybank/common/receiveAward?uc_param_str=dsdnfrpfbivessbtbmnilauputogpintnwmtsvcppcprsnnnchmicg&ds=bTkwBcXYyTnXclKK%2FyWDUod60d1sxjwQ5gSMUu3%2BVAzRUg%3D%3D&dn=39260040946-fc73ad38&fr=iphone&pf=44&bi=997&ve=13.4.2.1504&ss=414x896&bt=UC&bm=WWW&ni=bTkwBdE3Cl%2Bor5IVlvEvuvg8ItF1dMiYL0m3nva50LUPD9E%3D&la=zh-cn&up=s%3AiP4.X%7Cf%3Aiphone%7Cm%3AiPhone%7Cb%3Aapple&ut=AAQGqLySGGUJMnVomUINYC48x2nwF0NB0ZURNygPD8P%2FtQ%3D%3D&og=GR&pi=1242x2688&nt=2&nw=WIFI&mt=YLNLmCNLOh9kOzV6MYz%2FGWrlDx5JhDwv&sv=app&pc=AASZtg30J6cEZGl0meB9hj0EMvk2gAaMNzGNpFt5%2F1Wr22xA78Fc2x%2FDJXA5FmlrHdzfbxMfvixRM5KGiiIPByJD&pr=UCBrowser&sn=2106-39260040946-3599a2a9&nn=AATVsKbLqO8LohhIHsJTBHbNWPIXxevxSjOJrV1%2Fu3fdYg%3D%3D&mi=iPhone11%2C6', headers=headers, data=data)
+
+
+
