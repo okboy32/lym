@@ -299,18 +299,7 @@ let ucpigappkey = $[get_data_('5', 'B]dO')]('ucpigappkey');
         if (_0x36331c.GroOa(_0x36331c['pQDYw'], _0x36331c.pQDYw)) {
           return !![];
         } else {
-          console.log('get_data_(\'3f\', \'PIyv\')');
-          console.log(get_data_('3f', 'PIyv'));
-          console.log('get_data_(\'40\', \'6fqO\')');
-          console.log(get_data_('40', '6fqO'));
-          console.log('get_data_(\'41\', \'E$]n\')');
-          console.log(get_data_('41', 'E$]n'));
-          console.log('get_data_(\'42\', \'#[HO\')');
-          console.log(get_data_('42', '#[HO'));
-
-
-          $[get_data_('3f', 'PIyv')](get_data_('40', '6fqO') + $['name'] + get_data_('41', 'E$]n') + _0x36331c[get_data_('42', '#[HO')](_0x4f6326, 0x1) + get_data_('43', 'X%O^'));
-          return;
+          $.log('\n' + '🤖[' + $['name'] + ']:~ System💲/执行脚本\n开始执行 👤User' + _0x36331c.nkLws(_0x4f6326, 0x1) + '的脚本任务');
           await main(_0x4f6326);
         }
       }
@@ -400,9 +389,10 @@ async function main(_0x2bceda) {
       return _0x495a1b == _0x1343ad;
     }
   };
-  console[get_data_('7f', 'RHv!')](get_data_('80', 'eOky') + $[get_data_('81', 'ow(k')] + ']:~\x20User' + (_0x2bceda + 0x1) + get_data_('82', 'vrHP'));
-  await _0x3bbdc9[get_data_('83', 'DsER')](getUserInfo);
-  console[get_data_('3f', 'PIyv')]('\x0a🐷[' + $['name'] + get_data_('84', '5fpv') + _0x3bbdc9[get_data_('85', 'B]dO')](_0x2bceda, 0x1) + get_data_('86', 'B]dO'));
+  console.log('🐷[' + $.name + ']:~\x20User' + (_0x2bceda + 0x1) + '💲查询元宝数量');
+  await getUserInfo();
+  return;
+  console.log('\x0a🐷[' + $['name'] + ']:~ User' + (_0x2bceda + 0x1) + '💲收小猪扑满的元宝\n');
   !tkList[get_data_('87', 'Kdeb')] ? $.log(_0x3bbdc9['IXHJZ']) : await _0x3bbdc9['eSbFO'](pigAward);
   ;console[get_data_('88', 'RRdP')]('\x0a🐷[' + $[get_data_('89', '19Fz')] + get_data_('8a', '2YqD') + _0x3bbdc9[get_data_('8b', 'HEL4')](_0x2bceda, 0x1) + get_data_('8c', 'EJiT'));
   !tkList['videotask1'] ? $.log(_0x3bbdc9[get_data_('8d', 'C$yt')]) : await _0x3bbdc9['eSbFO'](videoTaskTest1);
