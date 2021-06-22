@@ -588,7 +588,7 @@ async function videoAward(m) {
 
 //视频奖励测试
 async function videoAwardTest() {
-  let testArrNum = Random(0, tkList.videoaward.length)
+  let testArrNum = 5;
   console.log(`→随机测试奖励数据:第${testArrNum + 1}个数据`);
   return new Promise((resolve) => {
     const options = initTaskOptions(tkList.videoaward[testArrNum]);
